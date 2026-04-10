@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import contactProject from "../data/contact-project";
 import mentees from "../data/mentees";
 
@@ -15,16 +16,26 @@ const HomeMentorship = () => (
     <div className="container">
       <div className="mentorship-layout">
         <div className="mentorship-visual">
-          {contactProject.images.map((image, i) => (
-            <img
-              key={i}
-              src={image.src}
-              alt={image.alt}
-              className={`mentorship-visual__photo mentorship-visual__photo--${i + 1}`}
-              loading="lazy"
-              decoding="async"
-            />
-          ))}
+          <StaticImage
+            src="../../static/assets/images/hero/osmar-mentor-1.jpeg"
+            alt="Osmar during a mentorship conversation"
+            className="mentorship-visual__photo mentorship-visual__photo--1"
+            imgClassName="mentorship-visual__photo-image"
+            loading="lazy"
+            placeholder="blurred"
+            quality={80}
+            formats={["auto", "webp", "avif"]}
+          />
+          <StaticImage
+            src="../../static/assets/images/hero/osmar-mentor-2.jpeg"
+            alt="Osmar offering guidance during a mentoring session"
+            className="mentorship-visual__photo mentorship-visual__photo--2"
+            imgClassName="mentorship-visual__photo-image"
+            loading="lazy"
+            placeholder="blurred"
+            quality={80}
+            formats={["auto", "webp", "avif"]}
+          />
         </div>
         <div className="mentorship-info">
           <span className="mentorship-info__label">Mentorship</span>

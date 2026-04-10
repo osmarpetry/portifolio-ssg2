@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "description": "Osmar Petry portfolio — Gatsby SSG",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
+    "analyze:build": "ANALYZE_BUNDLE=true gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test:e2e": "playwright test",
@@ -13,19 +17,25 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "gatsby": "^5.13.0",
-    "gatsby-plugin-manifest": "^5.13.0",
-    "gatsby-plugin-sharp": "^5.13.0",
-    "gatsby-remark-autolink-headers": "^6.13.0",
+    "gatsby": "5.16.1",
+    "gatsby-plugin-feed": "5.16.0",
+    "gatsby-plugin-image": "3.16.0",
+    "gatsby-plugin-manifest": "5.16.0",
+    "gatsby-plugin-robots-txt": "1.8.0",
+    "gatsby-plugin-sharp": "5.16.0",
+    "gatsby-plugin-sitemap": "6.16.0",
+    "gatsby-remark-autolink-headers": "6.16.0",
     "gatsby-remark-external-links": "^0.0.4",
-    "gatsby-source-filesystem": "^5.13.0",
-    "gatsby-transformer-remark": "^6.13.0",
-    "gatsby-transformer-sharp": "^5.13.0",
+    "gatsby-source-filesystem": "5.16.0",
+    "gatsby-transformer-remark": "6.16.0",
+    "gatsby-transformer-sharp": "5.16.0",
     "highlight.js": "^11.11.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sharp": "0.34.5"
   },
   "devDependencies": {
-    "@playwright/test": "^1.55.1"
+    "@playwright/test": "^1.55.1",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.32"
   }
 }

@@ -3,7 +3,7 @@ import HeroSection from "./HeroSection";
 
 const AboutSection = () => (
   <HeroSection
-    backgroundImage="/assets/images/hero/osmar-about.jpeg"
+    imageVariant="about"
     backgroundColor="#2a4639"
     position="right"
     title="About me"

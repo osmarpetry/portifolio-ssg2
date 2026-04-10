@@ -2,6 +2,11 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import pageMetadata from "../data/page-metadata";
+import {
+  buildBlogJsonLd,
+  buildBreadcrumbJsonLd,
+} from "../utils/structuredData";
 
 const normalizeSlug = (text) =>
   text
@@ -179,7 +184,32 @@ const PostsPage = ({ data }) => {
 export default PostsPage;
 
 export const Head = () => (
-  <Seo title="Blog — Osmar Petry" pathname="/posts/" />
+  <>
+    <Seo
+      title={pageMetadata.posts.title}
+      description={pageMetadata.posts.description}
+      pathname={pageMetadata.posts.pathname}
+      image={pageMetadata.posts.ogImagePath}
+      imageAlt="Blog page preview image"
+      jsonLd={[
+        buildBlogJsonLd({
+          name: "Osmar Petry Blog",
+          description: pageMetadata.posts.description,
+          pathname: pageMetadata.posts.pathname,
+        }),
+        buildBreadcrumbJsonLd([
+          { name: "Home", pathname: "/" },
+          { name: "Posts", pathname: pageMetadata.posts.pathname },
+        ]),
+      ]}
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Osmar Petry RSS Feed"
+      href="/rss.xml"
+    />
+  </>
 );
 
 export const query = graphql`

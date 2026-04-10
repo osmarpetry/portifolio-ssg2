@@ -4,16 +4,6 @@ const contactProject = {
   type: "Mentorship",
   summary:
     "Our firm also offers mentorship for people growing in frontend, product thinking, and engineering judgment. Open the LinkedIn post for more context.",
-  images: [
-    {
-      src: "/assets/images/hero/osmar-mentor-1.jpeg",
-      alt: "Osmar during a mentorship conversation",
-    },
-    {
-      src: "/assets/images/hero/osmar-mentor-2.jpeg",
-      alt: "Osmar offering guidance during a mentoring session",
-    },
-  ],
   links: [
     {
       label: "Mentorship",

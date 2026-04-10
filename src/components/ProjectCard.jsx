@@ -1,7 +1,38 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ProjectCard = ({ project }) => {
   const images = project.images || [];
+  const data = useStaticQuery(graphql`
+    query ProjectCardImagesQuery {
+      allFile(
+        filter: {
+          sourceInstanceName: { eq: "images" }
+          relativeDirectory: { regex: "/^screenshots\\/projects\\//" }
+        }
+      ) {
+        nodes {
+          relativeDirectory
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 82
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
+      }
+    }
+  `);
+
+  const imageBySlug = new Map(
+    data.allFile.nodes.map((node) => [
+      node.relativeDirectory.replace(/^screenshots\/projects\//, ""),
+      getImage(node.childImageSharp),
+    ])
+  );
 
   return (
     <article className="project-card">
@@ -9,15 +40,25 @@ const ProjectCard = ({ project }) => {
         className={`project-media${images.length > 1 ? " project-media--gallery" : ""}`}
       >
         {images.map((image, i) => (
-          <img
-            key={i}
-            src={image.src}
-            alt={image.alt}
-            loading="lazy"
-            decoding="async"
-            width={1600}
-            height={1000}
-          />
+          image.slug && imageBySlug.get(image.slug) ? (
+            <GatsbyImage
+              key={i}
+              image={imageBySlug.get(image.slug)}
+              alt={image.alt}
+              className="project-media__image-wrap"
+              imgClassName="project-media__image"
+            />
+          ) : (
+            <img
+              key={i}
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              decoding="async"
+              width={1600}
+              height={1000}
+            />
+          )
         ))}
       </div>
       <div className="project-body">

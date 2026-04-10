@@ -3,6 +3,11 @@ import { Link, graphql } from "gatsby";
 import hljs from "highlight.js";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import pageMetadata from "../data/page-metadata";
+import {
+  buildArticleJsonLd,
+  buildBreadcrumbJsonLd,
+} from "../utils/structuredData";
 
 const formatDate = (dateStr) => {
   const d = new Date(dateStr);
@@ -255,13 +260,41 @@ const PostTemplate = ({ data, location }) => {
 export default PostTemplate;
 
 export const Head = ({ data }) => {
-  const { title, description } = data.markdownRemark.frontmatter;
+  const { title, description, date, tags } = data.markdownRemark.frontmatter;
   const slug = data.markdownRemark.fields.slug;
+  const excerpt = data.markdownRemark.excerpt;
+  const resolvedDescription = description || excerpt;
+  const pathname = pageMetadata.getPostPathname(slug);
+  const ogImagePath = pageMetadata.getPostOgImagePath(slug);
+
   return (
     <Seo
       title={`${title} — Osmar Petry`}
-      description={description}
-      pathname={`/posts/${slug}/`}
+      description={resolvedDescription}
+      pathname={pathname}
+      image={ogImagePath}
+      imageAlt={`${title} post preview image`}
+      type="article"
+      article={{
+        publishedTime: date,
+        modifiedTime: date,
+        tags: tags || [],
+      }}
+      jsonLd={[
+        buildArticleJsonLd({
+          title,
+          description: resolvedDescription,
+          pathname,
+          imagePath: ogImagePath,
+          datePublished: date,
+          tags: tags || [],
+        }),
+        buildBreadcrumbJsonLd([
+          { name: "Home", pathname: "/" },
+          { name: "Posts", pathname: pageMetadata.posts.pathname },
+          { name: title, pathname },
+        ]),
+      ]}
     />
   );
 };
@@ -269,6 +302,7 @@ export const Head = ({ data }) => {
 export const query = graphql`
   query PostBySlug($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      excerpt(pruneLength: 180)
       html
       frontmatter {
         title

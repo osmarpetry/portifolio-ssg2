@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import siteData from "../data/site";
 
 const GithubIcon = () => (
@@ -20,7 +21,7 @@ const LinkedInIcon = () => (
 );
 
 const HeroSection = ({
-  backgroundImage,
+  imageVariant = "home",
   backgroundColor = "#203629",
   position = "left",
   title,
@@ -32,6 +33,33 @@ const HeroSection = ({
     : "hero section hero--home";
   const sectionId = isFooterHero ? "about" : "intro";
 
+  const heroImage =
+    imageVariant === "about" ? (
+      <StaticImage
+        src="../../static/assets/images/hero/osmar-about.jpeg"
+        alt=""
+        className="hero-media__image-wrap"
+        imgClassName="hero-media__image"
+        loading="lazy"
+        placeholder="blurred"
+        quality={82}
+        formats={["auto", "webp", "avif"]}
+        imgStyle={{ objectFit: "cover", objectPosition: "center center" }}
+      />
+    ) : (
+      <StaticImage
+        src="../../static/assets/images/hero/osmar-hero.jpg"
+        alt=""
+        className="hero-media__image-wrap"
+        imgClassName="hero-media__image"
+        loading="eager"
+        placeholder="blurred"
+        quality={82}
+        formats={["auto", "webp", "avif"]}
+        imgStyle={{ objectFit: "cover", objectPosition: "center center" }}
+      />
+    );
+
   return (
     <section className={sectionClass} id={sectionId}>
       <div className="container">
@@ -40,13 +68,7 @@ const HeroSection = ({
           style={{ "--hero-background-color": backgroundColor }}
         >
           <div className="hero-media">
-            <img
-              className="hero-media__image"
-              src={backgroundImage}
-              alt=""
-              loading={isFooterHero ? "lazy" : "eager"}
-              decoding="async"
-            />
+            {heroImage}
           </div>
           <div className={`hero-card hero-card--${position}`}>
             {isFooterHero ? <h2>{title}</h2> : <h1>{title}</h1>}

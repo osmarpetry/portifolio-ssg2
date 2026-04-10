@@ -14,8 +14,10 @@ const HomeCompanies = () => (
             <img
               className="company-item__logo"
               src={company.brand.src}
-              alt={company.name}
+              alt={company.brand.alt || company.name}
               loading="lazy"
+              width={company.brand.width}
+              height={company.brand.height}
             />
           </div>
         ))}

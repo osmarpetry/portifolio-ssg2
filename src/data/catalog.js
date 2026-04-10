@@ -1,5 +1,4 @@
 import projects from "./projects";
-import companies from "./companies";
 
 const PROJECT_SLUGS_WITH_IMAGES = new Set([
   "chargebee-brevo-demo",
@@ -24,6 +23,7 @@ const PROJECT_SLUGS_WITH_IMAGES = new Set([
 
 function resolveImage(slug) {
   return {
+    slug,
     src: `/assets/images/screenshots/projects/${slug}/cover.png`,
     alt: `Cover image for ${slug}.`,
   };
@@ -55,40 +55,13 @@ for (const project of derivedProjects) {
   }
 }
 
-const companiesBySlug = {};
-for (const company of companies) {
-  companiesBySlug[company.slug] = company;
-}
-
 const homeTier1PreviewProjects = projectsByTier[1].slice(0, 4);
-
-const homeCompanyHighlightOrder = ["attend", "consulting", "x-team", "luizalabs"];
-const homeCompanyProjects = homeCompanyHighlightOrder
-  .map((slug) => companiesBySlug[slug])
-  .filter(Boolean)
-  .map((company) => {
-    const project = company.projects[0];
-    if (!project) return null;
-    return {
-      ...project,
-      type: company.name,
-      links: [
-        ...(project.links || []),
-        { label: "All company work", url: `/companies/#company-${company.slug}` },
-      ],
-      companySlug: company.slug,
-      companyName: company.name,
-    };
-  })
-  .filter(Boolean);
 
 const allProjectsWithImages = derivedProjects.filter((p) => p.hasImage);
 const allProjectsWithoutImages = derivedProjects.filter((p) => !p.hasImage);
 
 const catalog = {
   allReposCount: derivedProjects.reduce((total, p) => total + p.repos.length, 0),
-  companiesBySlug,
-  homeCompanyProjects,
   homeTier1PreviewProjects,
   projectByRepoSlug,
   projectsWithImagesOrdered: allProjectsWithImages,

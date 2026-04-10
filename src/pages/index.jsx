@@ -6,11 +6,13 @@ import HomeCompanies from "../components/HomeCompanies";
 import HomeMentorship from "../components/HomeMentorship";
 import FeaturedWork from "../components/FeaturedWork";
 import LatestPosts from "../components/LatestPosts";
+import pageMetadata from "../data/page-metadata";
+import { buildPersonJsonLd, buildWebSiteJsonLd } from "../utils/structuredData";
 
 const IndexPage = () => (
   <Layout>
     <HeroSection
-      backgroundImage="/assets/images/hero/osmar-hero.jpg"
+      imageVariant="home"
       backgroundColor="#203629"
       position="left"
       title="Osmar Petry"
@@ -25,4 +27,13 @@ const IndexPage = () => (
 
 export default IndexPage;
 
-export const Head = () => <Seo pathname="/" />;
+export const Head = () => (
+  <Seo
+    title={pageMetadata.home.title}
+    description={pageMetadata.home.description}
+    pathname={pageMetadata.home.pathname}
+    image={pageMetadata.home.ogImagePath}
+    imageAlt="Osmar Petry portfolio hero preview image"
+    jsonLd={[buildWebSiteJsonLd(), buildPersonJsonLd()]}
+  />
+);

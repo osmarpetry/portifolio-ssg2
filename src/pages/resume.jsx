@@ -2,6 +2,12 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import pageMetadata from "../data/page-metadata";
+import {
+  buildBreadcrumbJsonLd,
+  buildPersonJsonLd,
+  buildProfilePageJsonLd,
+} from "../utils/structuredData";
 
 const ResumePage = ({ data }) => {
   const resumeFile = data.markdownRemark;
@@ -48,7 +54,25 @@ const ResumePage = ({ data }) => {
 export default ResumePage;
 
 export const Head = () => (
-  <Seo title="Resume — Osmar Petry" pathname="/resume/" />
+  <Seo
+    title={pageMetadata.resume.title}
+    description={pageMetadata.resume.description}
+    pathname={pageMetadata.resume.pathname}
+    image={pageMetadata.resume.ogImagePath}
+    imageAlt="Resume page preview image"
+    jsonLd={[
+      buildProfilePageJsonLd({
+        name: "Osmar Petry Resume",
+        description: pageMetadata.resume.description,
+        pathname: pageMetadata.resume.pathname,
+      }),
+      buildPersonJsonLd(),
+      buildBreadcrumbJsonLd([
+        { name: "Home", pathname: "/" },
+        { name: "Resume", pathname: pageMetadata.resume.pathname },
+      ]),
+    ]}
+  />
 );
 
 export const query = graphql`

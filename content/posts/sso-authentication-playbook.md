@@ -1,6 +1,7 @@
 ---
 title: "PixieShop Authentication Playbook — OIDC SSO Across Four Identity Providers"
 date: 2026-03-21
+description: "Practical OIDC SSO playbook for a Next.js B2B SaaS using Auth.js v5, FusionAuth, Okta, and Microsoft Entra ID."
 tags:
   [
     sso,

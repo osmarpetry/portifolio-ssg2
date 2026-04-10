@@ -2,6 +2,7 @@ import React from "react";
 import { Link, navigate } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import pageMetadata from "../data/page-metadata";
 
 const handleGoBack = () => {
   if (typeof window === "undefined") return;
@@ -68,8 +69,10 @@ export default NotFoundPage;
 
 export const Head = () => (
   <Seo
-    title="404 — Osmar Petry"
-    description="The page you requested could not be found."
-    pathname="/404/"
+    title={pageMetadata.notFound.title}
+    description={pageMetadata.notFound.description}
+    pathname={pageMetadata.notFound.pathname}
+    image={pageMetadata.notFound.ogImagePath}
+    noindex
   />
 );

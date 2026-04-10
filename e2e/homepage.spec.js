@@ -41,8 +41,6 @@ test.describe("Homepage", () => {
   test("should display footer", async ({ page }) => {
     await expect(page.locator(".site-footer")).toBeVisible();
     await expect(page.locator(".footer-inner")).toContainText("Osmar Petry");
-  });
-
   test("should have skip link", async ({ page }) => {
     const skipLink = page.locator(".skip-link");
     await expect(skipLink).toHaveAttribute("href", "#main");

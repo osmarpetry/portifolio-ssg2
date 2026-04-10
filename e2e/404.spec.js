@@ -24,12 +24,21 @@ test.describe("404 page", () => {
   });
 
   test("should return to the previous page from the 404 page", async ({ page }) => {
-    await page.goto("/projects/");
-    await page.goto("/missing-route/");
+    await page.goto("/missing-route/", {
+      referer: "http://localhost:9000/projects/",
+    });
 
     await page.locator('button.action-link[type="button"]').click();
 
     await expect(page).toHaveURL(/\/projects\//);
     await expect(page.locator("h1")).toContainText("Projects.");
+  });
+
+  test("should render 404 for the removed companies route", async ({ page }) => {
+    const response = await page.goto("/companies/");
+
+    expect(response.status()).toBe(404);
+    await expect(page.locator("h1")).toContainText("Page not found.");
+    await expect(page.locator(".not-found-description")).toBeVisible();
   });
 });
