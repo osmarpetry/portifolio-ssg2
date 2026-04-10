@@ -356,6 +356,10 @@ button:focus-visible {
     color: var(--text-muted);
 }
 
+.eyebrow--center {
+    text-align: center;
+}
+
 /* Breadcrumb */
 .breadcrumb {
     display: flex;
