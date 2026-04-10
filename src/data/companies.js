@@ -10,7 +10,7 @@ const companies = [
     brand: {
       kind: "logo",
       text: "Cyberr",
-      src: "/assets/images/company-logos/cyber.png",
+      src: "/assets/images/company-logos/cyber.svg",
       alt: "Cyberr logo",
     },
     projects: [
@@ -38,7 +38,7 @@ const companies = [
     brand: {
       kind: "logo",
       text: "Attend",
-      src: "/assets/images/company-logos/attend-dark.png",
+      src: "/assets/images/company-logos/attend-dark-inv.png",
       alt: "Attend logo",
     },
     projects: [
@@ -270,8 +270,8 @@ const companies = [
     brand: {
       kind: "logo",
       text: "CoBlue",
-      src: "/assets/images/company-logos/coblue.png",
-      alt: "CoBlue icon",
+      src: "/assets/images/company-logos/coblue-new.jpg",
+      alt: "CoBlue logo",
     },
     projects: [
       {
@@ -299,7 +299,7 @@ const companies = [
       kind: "logo",
       text: "TOTVS",
       src: "/assets/images/company-logos/totvs.png",
-      alt: "TOTVS icon",
+      alt: "TOTVS logo",
     },
     projects: [
       {
@@ -326,7 +326,7 @@ const companies = [
     brand: {
       kind: "logo",
       text: "Envolve Labs",
-      src: "/assets/images/company-logos/envolve-labs.png",
+      src: "/assets/images/company-logos/envolve-labs-dark.png",
       alt: "Envolve Labs logo",
     },
     projects: [
@@ -355,7 +355,7 @@ const companies = [
       kind: "logo",
       text: "Catolica SC",
       src: "/assets/images/company-logos/catolica.png",
-      alt: "Catolica SC icon",
+      alt: "Catolica SC logo",
     },
     projects: [
       {
