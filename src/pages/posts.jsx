@@ -73,6 +73,7 @@ const PostsPage = ({ data }) => {
   const activeTagLabel = normalizedActive
     ? allTags.find((t) => t.slug === normalizedActive)?.label || activeTag
     : "";
+  const currentFilterLabel = activeTagLabel || "All Posts";
 
   const statusText = normalizedActive
     ? `${filteredPosts.length} post${filteredPosts.length === 1 ? "" : "s"} in ${activeTagLabel}`
@@ -84,21 +85,15 @@ const PostsPage = ({ data }) => {
         <div className="container">
           <div className="section-heading">
             <nav className="breadcrumb" aria-label="Breadcrumb">
-              {normalizedActive ? (
-                <>
-                  <button
-                    className="breadcrumb__link"
-                    type="button"
-                    onClick={() => applyFilter("")}
-                  >
-                    Blog
-                  </button>
-                  <span className="breadcrumb__sep" aria-hidden="true">/</span>
-                  <span className="breadcrumb__current">{activeTagLabel}</span>
-                </>
-              ) : (
-                <span className="breadcrumb__current">Blog</span>
-              )}
+              <button
+                className="breadcrumb__link"
+                type="button"
+                onClick={() => applyFilter("")}
+              >
+                Blog
+              </button>
+              <span className="breadcrumb__sep" aria-hidden="true">/</span>
+              <span className="breadcrumb__current">{currentFilterLabel}</span>
             </nav>
             <h1 id="posts-index-heading">Blog.</h1>
             <p>
