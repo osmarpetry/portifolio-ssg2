@@ -65,8 +65,8 @@ const Navbar = () => {
           <Link className="nav-link" to="/resume/" onClick={close}>
             Resume
           </Link>
-          <Link className="nav-link" to="/posts/" onClick={close}>
-            Posts
+          <Link className="nav-link" to="/blog/" onClick={close}>
+            Blog
           </Link>
         </div>
       </div>
