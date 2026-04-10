@@ -27,9 +27,6 @@ const ProjectTeaserItem = ({ project }) => {
           <span className="company-teaser-item__role project-teaser-item__summary">
             {project.summary}
           </span>
-          <span className="company-teaser-item__count project-teaser-item__chip">
-            {project.tierLabel || `Tier ${project.tier}`}
-          </span>
           {(project.stack || []).map((item, i) => (
             <span
               key={i}

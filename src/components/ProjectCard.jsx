@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
         ))}
       </div>
       <div className="project-body">
-        <p className="project-type">{project.type}</p>
+        {project.type && <p className="project-type">{project.type}</p>}
         <h3>{project.title}</h3>
         <p className="project-summary">{project.summary}</p>
         {project.stack && (

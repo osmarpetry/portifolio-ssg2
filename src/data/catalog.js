@@ -1,24 +1,43 @@
 import projects from "./projects";
 import companies from "./companies";
 
+const PROJECT_SLUGS_WITH_IMAGES = new Set([
+  "chargebee-brevo-demo",
+  "rick-et-morty",
+  "flowers-city",
+  "my-accounts",
+  "felippe",
+  "speach-poc",
+  "earth-1999",
+  "animation-principles-explorer",
+  "goodread",
+  "moneylion-demo",
+  "lumdb",
+  "tokens-figma-node",
+  "black-spotify",
+  "weather-7",
+  "bootstrap-resposive-site",
+  "fotograf",
+  "lumdb-nextjs",
+  "spring-animations",
+]);
+
+function resolveImage(slug) {
+  return {
+    src: `/assets/images/screenshots/projects/${slug}/cover.png`,
+    alt: `Cover image for ${slug}.`,
+  };
+}
+
 function deriveProject(project) {
   const githubLinks = project.links.filter((link) => /github\.com/i.test(link.url));
   const liveLinks = project.links.filter((link) => !/github\.com/i.test(link.url));
-
-  const imageCandidates = [
-    `/assets/images/projects/${project.slug}/cover.jpg`,
-    `/assets/images/projects/${project.slug}/cover.png`,
-    `/assets/images/screenshots/projects/${project.slug}/cover.png`,
-  ];
+  const hasImage = PROJECT_SLUGS_WITH_IMAGES.has(project.slug);
 
   return {
     ...project,
-    type: `Tier ${project.tier}`,
-    tierLabel: `Tier ${project.tier}`,
-    images: imageCandidates.length
-      ? [{ src: imageCandidates[0], alt: `Cover image for ${project.title}.` }]
-      : [],
-    hasImage: true,
+    images: hasImage ? [resolveImage(project.slug)] : [],
+    hasImage,
     githubLinks,
     liveLinks,
   };
@@ -40,42 +59,6 @@ const companiesBySlug = {};
 for (const company of companies) {
   companiesBySlug[company.slug] = company;
 }
-
-const tierDescriptions = {
-  1: {
-    label: "Tier 1",
-    shortLabel: "T1",
-    title: "Strongest work",
-    description:
-      "The first projects someone should read to understand the strongest frontend, product, and implementation work in the portfolio.",
-    meaning:
-      "Lead selection. These projects best represent current quality, depth, and judgment.",
-    path: "/projects/#tier-1",
-    ctaLabel: "Open Tier 1",
-  },
-  2: {
-    label: "Tier 2",
-    shortLabel: "T2",
-    title: "Context and range",
-    description:
-      "Solid supporting work that adds range, context, and breadth, but should be read after Tier 1.",
-    meaning:
-      "Supporting selection. Useful for range and context, but not the lead read.",
-    path: "/projects/#tier-2",
-    ctaLabel: "Open Tier 2",
-  },
-  3: {
-    label: "Tier 3",
-    shortLabel: "T3",
-    title: "Archive",
-    description:
-      "Historical repos, experiments, and older work kept visible for completeness without carrying the main narrative.",
-    meaning:
-      "Archive. Visible on purpose, but not prioritized in the reading order.",
-    path: "/projects/#tier-3",
-    ctaLabel: "Open Tier 3",
-  },
-};
 
 const homeTier1PreviewProjects = projectsByTier[1].slice(0, 4);
 
@@ -114,7 +97,6 @@ const catalog = {
   tier1Projects: projectsByTier[1],
   tier2Projects: projectsByTier[2],
   tier3Projects: projectsByTier[3],
-  tierDescriptions,
 };
 
 export default catalog;
