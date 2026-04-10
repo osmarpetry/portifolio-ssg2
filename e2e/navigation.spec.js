@@ -10,8 +10,8 @@ test.describe("Navigation", () => {
 
   test("should navigate to posts page", async ({ page }) => {
     await page.goto("/");
-    await page.locator('a.nav-link[href="/posts/"]').click();
-    await expect(page).toHaveURL(/\/posts\//);
+    await page.locator('a.nav-link[href="/blog/"]').click();
+    await expect(page).toHaveURL(/\/blog\//);
     await expect(page.locator("h1")).toContainText("Blog.");
   });
 

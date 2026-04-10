@@ -112,7 +112,7 @@ module.exports = {
         resolvePages: ({ allSitePage, allMarkdownRemark }) => {
           const postByPath = new Map(
             allMarkdownRemark.nodes.map((node) => [
-              `/posts/${node.fields.slug}/`,
+              `/blog/${node.fields.slug}/`,
               node.frontmatter.date,
             ])
           );
@@ -173,8 +173,8 @@ module.exports = {
                 title: node.frontmatter.title,
                 description: node.frontmatter.description || node.excerpt,
                 date: node.frontmatter.date,
-                url: `${site.siteMetadata.siteUrl}/posts/${node.fields.slug}/`,
-                guid: `${site.siteMetadata.siteUrl}/posts/${node.fields.slug}/`,
+                url: `${site.siteMetadata.siteUrl}/blog/${node.fields.slug}/`,
+                guid: `${site.siteMetadata.siteUrl}/blog/${node.fields.slug}/`,
                 custom_elements: [{ "content:encoded": node.html }],
               })),
             query: `

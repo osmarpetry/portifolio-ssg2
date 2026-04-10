@@ -50,7 +50,7 @@ const LatestPosts = () => {
             <li key={post.id} className="company-teaser-item home-post-item">
               <Link
                 className="company-teaser-item__link home-post-item__link"
-                to={`/posts/${post.fields.slug}/`}
+                to={`/blog/${post.fields.slug}/`}
               >
                 <span className="company-teaser-item__name home-post-item__name">
                   {post.frontmatter.title}
@@ -76,7 +76,7 @@ const LatestPosts = () => {
         </ul>
 
         <div className="company-teaser-cta">
-          <Link className="action-link action-link--tier" to="/posts/">
+          <Link className="action-link action-link--tier" to="/blog/">
             Open the blog
           </Link>
         </div>

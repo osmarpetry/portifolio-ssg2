@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 test.describe("Posts page", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("/posts/");
+    await page.goto("/blog/");
   });
 
   test("should display the posts heading", async ({ page }) => {
@@ -24,7 +24,7 @@ test.describe("Posts page", () => {
     await secondChip.click();
 
     await expect(secondChip).toHaveClass(/is-active/);
-    await expect(page).toHaveURL(/\/posts\/#tag=/);
+    await expect(page).toHaveURL(/\/blog\/#tag=/);
     await expect(page.locator(".breadcrumb__link")).toContainText("Blog");
     await expect(page.locator(".breadcrumb__current")).toContainText(tagLabel);
   });
@@ -36,7 +36,7 @@ test.describe("Posts page", () => {
     await expect(allPostsChip).toContainText("All posts");
     await expect(page.locator(".breadcrumb__link")).toContainText("Blog");
     await expect(page.locator(".breadcrumb__current")).toContainText("All Posts");
-    await expect(page).toHaveURL(/\/posts\/$/);
+    await expect(page).toHaveURL(/\/blog\/$/);
   });
 
   test("should return breadcrumb to all posts after clearing a tag", async ({
@@ -47,13 +47,13 @@ test.describe("Posts page", () => {
     const secondChip = chips.nth(1);
 
     await secondChip.click();
-    await expect(page).toHaveURL(/\/posts\/#tag=/);
+    await expect(page).toHaveURL(/\/blog\/#tag=/);
 
     await allPostsChip.click();
 
     await expect(allPostsChip).toHaveClass(/is-active/);
     await expect(page.locator(".breadcrumb__link")).toContainText("Blog");
     await expect(page.locator(".breadcrumb__current")).toContainText("All Posts");
-    await expect(page).toHaveURL(/\/posts\/$/);
+    await expect(page).toHaveURL(/\/blog\/$/);
   });
 });

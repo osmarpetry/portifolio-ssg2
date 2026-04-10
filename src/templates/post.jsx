@@ -202,7 +202,7 @@ const PostTemplate = ({ data, location }) => {
             <div className="post-page__header">
               <div className="markdown-page__header-copy">
                 <nav className="breadcrumb" aria-label="Breadcrumb">
-                  <Link className="breadcrumb__link" to="/posts/">
+                  <Link className="breadcrumb__link" to="/blog/">
                     Blog
                   </Link>
                   {fromTag && (
@@ -210,7 +210,7 @@ const PostTemplate = ({ data, location }) => {
                       <span className="breadcrumb__sep" aria-hidden="true">/</span>
                       <Link
                         className="breadcrumb__link"
-                        to={`/posts/#tag=${encodeURIComponent(fromTag)}`}
+                        to={`/blog/#tag=${encodeURIComponent(fromTag)}`}
                       >
                         {fromTag}
                       </Link>

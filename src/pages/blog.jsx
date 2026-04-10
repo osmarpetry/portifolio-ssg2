@@ -140,7 +140,7 @@ const PostsPage = ({ data }) => {
               <li key={post.id} className="posts-index-item">
                 <Link
                   className="posts-index-card"
-                  to={`/posts/${post.fields.slug}/`}
+                  to={`/blog/${post.fields.slug}/`}
                   state={{ fromTag: normalizedActive || null }}
                 >
                   <div className="posts-index-card__meta">

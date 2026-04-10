@@ -5,7 +5,7 @@ test.describe("Post detail page", () => {
     page,
   }) => {
     await page.setViewportSize({ width: 480, height: 960 });
-    await page.goto("/posts/");
+    await page.goto("/blog/");
     const chips = page.locator(".posts-filter__chip");
     const tagChip = chips.nth(1);
 
@@ -41,15 +41,15 @@ test.describe("Post detail page", () => {
   test("should render related notes as post links and syntax-highlight code", async ({
     page,
   }) => {
-    await page.goto("/posts/javascript-modules-and-bundlers/");
+    await page.goto("/blog/javascript-modules-and-bundlers/");
 
     await expect(
-      page.locator('a[href="/posts/javascript-closures-and-curries/"]').last()
+      page.locator('a[href="/blog/javascript-closures-and-curries/"]').last()
     ).toContainText("Closures and Curries");
     await expect(
-      page.locator('a[href="/posts/react-forwardRef/"]').last()
+      page.locator('a[href="/blog/react-forwardRef/"]').last()
     ).toContainText("Forwarding Ref");
-    await expect(page.locator('a[href="/posts/javascript-generator/"]')).toHaveCount(0);
+    await expect(page.locator('a[href="/blog/javascript-generator/"]')).toHaveCount(0);
 
     const missingGeneratorLink = page
       .locator(".post-inline-link--missing")

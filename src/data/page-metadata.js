@@ -14,11 +14,11 @@ const pageMetadata = {
     ogImagePath: "/assets/images/og/projects.jpg",
   },
   posts: {
-    pathname: "/posts/",
+    pathname: "/blog/",
     title: "Blog — Osmar Petry",
     description:
       "Notes and articles about software engineering, frontend architecture, accessibility, testing, systems thinking, and product-oriented development.",
-    ogImagePath: "/assets/images/og/posts.jpg",
+    ogImagePath: "/assets/images/og/blog.jpg",
   },
   resume: {
     pathname: "/resume/",
@@ -34,10 +34,10 @@ const pageMetadata = {
     ogImagePath: "/assets/images/og/home.jpg",
   },
   getPostPathname(slug) {
-    return `/posts/${slug}/`;
+    return `/blog/${slug}/`;
   },
   getPostOgImagePath(slug) {
-    return `/assets/images/og/posts/${slug}.jpg`;
+    return `/assets/images/og/blog/${slug}.jpg`;
   },
 };
 

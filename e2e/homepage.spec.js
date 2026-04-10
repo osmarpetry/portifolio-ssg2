@@ -13,7 +13,7 @@ test.describe("Homepage", () => {
     await expect(page.locator(".nav-brand")).toBeVisible();
     await expect(page.locator('a.nav-link[href="/projects/"]')).toBeVisible();
     await expect(page.locator('a.nav-link[href="/resume/"]')).toBeVisible();
-    await expect(page.locator('a.nav-link[href="/posts/"]')).toBeVisible();
+    await expect(page.locator('a.nav-link[href="/blog/"]')).toBeVisible();
   });
 
   test("should display companies section", async ({ page }) => {

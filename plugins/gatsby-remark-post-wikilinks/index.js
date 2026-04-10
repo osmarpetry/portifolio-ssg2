@@ -50,7 +50,7 @@ const buildReplacementNodes = (textNode, validPostSlugs) => {
     if (validPostSlugs.has(targetSlug)) {
       replacements.push({
         type: "link",
-        url: `/posts/${targetSlug}/`,
+        url: `/blog/${targetSlug}/`,
         children: [
           {
             type: "text",
