@@ -355,7 +355,11 @@ button:focus-visible {
 .breadcrumb {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 0.4rem;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
     margin: 0 0 0.9rem;
     font-size: 0.76rem;
     font-weight: 700;
@@ -365,6 +369,7 @@ button:focus-visible {
 }
 
 .breadcrumb__link {
+    flex: 0 0 auto;
     color: var(--purple);
     text-decoration: none;
     background: none;
@@ -382,11 +387,40 @@ button:focus-visible {
 }
 
 .breadcrumb__sep {
+    flex: 0 0 auto;
     color: var(--border);
 }
 
 .breadcrumb__current {
+    min-width: 0;
+    white-space: nowrap;
     color: var(--text-muted);
+    font-weight: 400;
+}
+
+.breadcrumb__current--truncate {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.breadcrumb__current-text {
+    display: inline-block;
+    min-width: 100%;
+    transform: translateX(0);
+    transition: none;
+    will-change: transform;
+}
+
+.breadcrumb__current--truncate[data-overflowing="true"]:hover {
+    color: var(--text);
+    text-overflow: clip;
+}
+
+.breadcrumb__current--truncate[data-overflowing="true"]:hover
+    .breadcrumb__current-text {
+    transform: translateX(calc(var(--breadcrumb-overflow, 0px) * -1));
+    transition: transform var(--breadcrumb-scroll-duration, 1.2s) linear;
 }
 
 h1,
@@ -453,6 +487,29 @@ li {
     text-decoration: none;
     font-size: 0.94rem;
     font-weight: 600;
+}
+
+.action-link--primary-page {
+    background: var(--purple-dark);
+    border-color: var(--purple-dark);
+    color: #fff;
+}
+
+.action-link--primary-page:hover {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: #fff;
+}
+
+.action-link--ghost-page {
+    font: inherit;
+    cursor: pointer;
+}
+
+.action-link--ghost-page:hover {
+    border-color: var(--border-strong);
+    background: rgba(255, 255, 255, 0.98);
+    color: var(--purple-dark);
 }
 
 
@@ -2343,6 +2400,41 @@ li {
     padding-top: var(--space-5);
 }
 
+.section-not-found {
+    padding-top: var(--space-6);
+}
+
+.not-found-card {
+    max-width: min(760px, 100%);
+    margin: 0 auto;
+    padding: clamp(1.6rem, 4vw, 3rem);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.96),
+        rgba(250, 246, 240, 0.92)
+    );
+    box-shadow: var(--shadow-card);
+}
+
+.not-found-title {
+    margin: 0;
+}
+
+.not-found-description {
+    max-width: 34rem;
+    margin: 1rem 0 0;
+    color: var(--text-muted);
+}
+
+.not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.75rem;
+}
+
 .markdown-page {
     display: flex;
     flex-direction: column;
@@ -2503,6 +2595,73 @@ li {
 .markdown-prose pre code {
     font-size: 0.92rem;
     line-height: 1.6;
+}
+
+/* Solarized-Dracula-inspired code highlighting */
+.markdown-prose pre .hljs {
+    display: block;
+    color: #f8f8f2;
+    background: transparent;
+}
+
+.markdown-prose pre .hljs-comment,
+.markdown-prose pre .hljs-quote {
+    color: #7b86b2;
+    font-style: italic;
+}
+
+.markdown-prose pre .hljs-keyword,
+.markdown-prose pre .hljs-selector-tag,
+.markdown-prose pre .hljs-literal,
+.markdown-prose pre .hljs-name,
+.markdown-prose pre .hljs-meta {
+    color: #ff79c6;
+}
+
+.markdown-prose pre .hljs-string,
+.markdown-prose pre .hljs-title,
+.markdown-prose pre .hljs-section,
+.markdown-prose pre .hljs-attribute,
+.markdown-prose pre .hljs-template-tag,
+.markdown-prose pre .hljs-template-variable {
+    color: #f1fa8c;
+}
+
+.markdown-prose pre .hljs-type,
+.markdown-prose pre .hljs-class .hljs-title,
+.markdown-prose pre .hljs-built_in,
+.markdown-prose pre .hljs-symbol,
+.markdown-prose pre .hljs-bullet,
+.markdown-prose pre .hljs-link {
+    color: #8be9fd;
+}
+
+.markdown-prose pre .hljs-number,
+.markdown-prose pre .hljs-regexp,
+.markdown-prose pre .hljs-addition,
+.markdown-prose pre .hljs-variable,
+.markdown-prose pre .hljs-selector-class,
+.markdown-prose pre .hljs-selector-attr {
+    color: #bd93f9;
+}
+
+.markdown-prose pre .hljs-function .hljs-title,
+.markdown-prose pre .hljs-subst,
+.markdown-prose pre .hljs-doctag {
+    color: #50fa7b;
+}
+
+.markdown-prose pre .hljs-deletion,
+.markdown-prose pre .hljs-selector-id {
+    color: #ff5555;
+}
+
+.markdown-prose pre .hljs-emphasis {
+    font-style: italic;
+}
+
+.markdown-prose pre .hljs-strong {
+    font-weight: 700;
 }
 
 .post-page__header {

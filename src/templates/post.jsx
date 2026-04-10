@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, graphql } from "gatsby";
+import hljs from "highlight.js";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
@@ -12,12 +13,125 @@ const formatDate = (dateStr) => {
   });
 };
 
+const decodeHtmlEntities = (value) =>
+  value
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#x27;/g, "'")
+    .replace(/&#96;/g, "`");
+
+const highlightLanguageAliases = {
+  html: "xml",
+  js: "javascript",
+  jsx: "javascript",
+  md: "markdown",
+  sh: "bash",
+  shell: "bash",
+  ts: "typescript",
+  tsx: "typescript",
+  yml: "yaml",
+  zsh: "bash",
+};
+
+const highlightCodeBlock = (language, encodedCode) => {
+  const normalizedLanguage = (
+    highlightLanguageAliases[language?.toLowerCase()] ||
+    language ||
+    ""
+  ).toLowerCase();
+  const decodedCode = decodeHtmlEntities(encodedCode);
+
+  if (normalizedLanguage && hljs.getLanguage(normalizedLanguage)) {
+    const highlightedCode = hljs.highlight(decodedCode, {
+      language: normalizedLanguage,
+      ignoreIllegals: true,
+    }).value;
+
+    return `<pre><code class="hljs language-${normalizedLanguage}">${highlightedCode}</code></pre>`;
+  }
+
+  const highlightedCode = hljs.highlightAuto(decodedCode).value;
+  return `<pre><code class="hljs">${highlightedCode}</code></pre>`;
+};
+
+const enhancePostHtml = (html) => {
+  const highlightedCodeBlocks = [];
+
+  const htmlWithCodePlaceholders = html.replace(
+    /<pre><code(?: class="language-([^"]+)")?>([\s\S]*?)<\/code><\/pre>/g,
+    (_, language = "", encodedCode) => {
+      const placeholder = `__CODE_BLOCK_${highlightedCodeBlocks.length}__`;
+      highlightedCodeBlocks.push(highlightCodeBlock(language, encodedCode));
+      return placeholder;
+    }
+  );
+
+  const htmlWithRelatedLinks = htmlWithCodePlaceholders.replace(
+    /\[\[([^|\]]+)\|([^\]]+)\]\]/g,
+    (_, targetSlug, label) =>
+      `<a href="/posts/${targetSlug.trim()}/">${label.trim()}</a>`
+  );
+
+  return htmlWithRelatedLinks.replace(
+    /__CODE_BLOCK_(\d+)__/g,
+    (_, index) => highlightedCodeBlocks[Number(index)] || ""
+  );
+};
+
 const PostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const { title, date, tags, description } = post.frontmatter;
   const slug = post.fields.slug;
+  const currentCrumbRef = useRef(null);
+  const currentCrumbTextRef = useRef(null);
 
   const fromTag = location?.state?.fromTag || null;
+  const renderedHtml = enhancePostHtml(post.html);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+
+    const currentCrumb = currentCrumbRef.current;
+    const currentCrumbText = currentCrumbTextRef.current;
+
+    if (!currentCrumb || !currentCrumbText) return undefined;
+
+    const updateBreadcrumbOverflow = () => {
+      const overflow = Math.max(
+        0,
+        currentCrumbText.scrollWidth - currentCrumb.clientWidth
+      );
+
+      currentCrumb.style.setProperty(
+        "--breadcrumb-overflow",
+        `${overflow}px`
+      );
+      currentCrumb.style.setProperty(
+        "--breadcrumb-scroll-duration",
+        `${Math.max(1.2, overflow / 48)}s`
+      );
+      currentCrumb.dataset.overflowing = overflow > 0 ? "true" : "false";
+    };
+
+    updateBreadcrumbOverflow();
+
+    const resizeObserver =
+      typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(updateBreadcrumbOverflow)
+        : null;
+
+    resizeObserver?.observe(currentCrumb);
+    resizeObserver?.observe(currentCrumbText);
+    window.addEventListener("resize", updateBreadcrumbOverflow);
+
+    return () => {
+      resizeObserver?.disconnect();
+      window.removeEventListener("resize", updateBreadcrumbOverflow);
+    };
+  }, [slug, fromTag]);
 
   return (
     <Layout>
@@ -42,7 +156,19 @@ const PostTemplate = ({ data, location }) => {
                     </>
                   )}
                   <span className="breadcrumb__sep" aria-hidden="true">/</span>
-                  <span className="breadcrumb__current">{slug}</span>
+                  <span
+                    ref={currentCrumbRef}
+                    className="breadcrumb__current breadcrumb__current--truncate"
+                    aria-label={slug}
+                    title={slug}
+                  >
+                    <span
+                      ref={currentCrumbTextRef}
+                      className="breadcrumb__current-text"
+                    >
+                      {slug}
+                    </span>
+                  </span>
                 </nav>
                 <h1 className="markdown-page__title">{title}</h1>
                 {description && (
@@ -62,7 +188,7 @@ const PostTemplate = ({ data, location }) => {
                 )}
               </div>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div dangerouslySetInnerHTML={{ __html: renderedHtml }} />
           </div>
         </div>
       </section>

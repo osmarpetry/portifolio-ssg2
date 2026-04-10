@@ -12,7 +12,7 @@ test.describe("Navigation", () => {
     await page.goto("/");
     await page.locator('a.nav-link[href="/posts/"]').click();
     await expect(page).toHaveURL(/\/posts\//);
-    await expect(page.locator("h1")).toContainText("Posts.");
+    await expect(page.locator("h1")).toContainText("Blog.");
   });
 
   test("should navigate to resume page", async ({ page }) => {
