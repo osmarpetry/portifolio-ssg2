@@ -46,9 +46,33 @@ test.describe("Post detail page", () => {
     await expect(
       page.locator('a[href="/posts/react-forwardRef/"]').last()
     ).toContainText("Forwarding Ref");
-    await expect(
-      page.locator('a[href="/posts/javascript-generator/"]').last()
-    ).toContainText("Generator");
+    await expect(page.locator('a[href="/posts/javascript-generator/"]')).toHaveCount(0);
+
+    const missingGeneratorLink = page
+      .locator(".post-inline-link--missing")
+      .filter({ hasText: "Generator" })
+      .last();
+
+    await expect(missingGeneratorLink).toContainText("Generator");
+    await expect(missingGeneratorLink).toHaveAttribute(
+      "aria-label",
+      "Generator. Page does not exist."
+    );
+    await expect(missingGeneratorLink).toHaveAttribute(
+      "title",
+      "Page does not exist."
+    );
+    await expect(missingGeneratorLink).toHaveAttribute(
+      "data-tooltip-message",
+      "Page does not exist."
+    );
+    await expect(missingGeneratorLink).toHaveCSS("cursor", "default");
+
+    await missingGeneratorLink.click();
+    await expect(missingGeneratorLink).toHaveAttribute(
+      "data-tooltip-visible",
+      "true"
+    );
 
     const highlightedCode = page.locator(".markdown-prose pre code.hljs").first();
 

@@ -69,13 +69,7 @@ const enhancePostHtml = (html) => {
     }
   );
 
-  const htmlWithRelatedLinks = htmlWithCodePlaceholders.replace(
-    /\[\[([^|\]]+)\|([^\]]+)\]\]/g,
-    (_, targetSlug, label) =>
-      `<a href="/posts/${targetSlug.trim()}/">${label.trim()}</a>`
-  );
-
-  return htmlWithRelatedLinks.replace(
+  return htmlWithCodePlaceholders.replace(
     /__CODE_BLOCK_(\d+)__/g,
     (_, index) => highlightedCodeBlocks[Number(index)] || ""
   );
@@ -87,6 +81,7 @@ const PostTemplate = ({ data, location }) => {
   const slug = post.fields.slug;
   const currentCrumbRef = useRef(null);
   const currentCrumbTextRef = useRef(null);
+  const proseRef = useRef(null);
 
   const fromTag = location?.state?.fromTag || null;
   const renderedHtml = enhancePostHtml(post.html);
@@ -133,11 +128,72 @@ const PostTemplate = ({ data, location }) => {
     };
   }, [slug, fromTag]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+
+    const prose = proseRef.current;
+
+    if (!prose) return undefined;
+
+    const tooltipTimers = new Map();
+
+    const hideTooltip = (element) => {
+      element.dataset.tooltipVisible = "false";
+      const activeTimer = tooltipTimers.get(element);
+
+      if (activeTimer) {
+        window.clearTimeout(activeTimer);
+        tooltipTimers.delete(element);
+      }
+    };
+
+    const showTooltip = (element) => {
+      hideTooltip(element);
+      element.dataset.tooltipVisible = "true";
+
+      const timer = window.setTimeout(() => {
+        element.dataset.tooltipVisible = "false";
+        tooltipTimers.delete(element);
+      }, 1800);
+
+      tooltipTimers.set(element, timer);
+    };
+
+    const handleClick = (event) => {
+      const missingLink = event.target.closest(".post-inline-link--missing");
+
+      if (!missingLink || !prose.contains(missingLink)) return;
+
+      event.preventDefault();
+      showTooltip(missingLink);
+    };
+
+    const handleMouseLeave = (event) => {
+      const missingLink = event.target.closest(".post-inline-link--missing");
+
+      if (!missingLink || !prose.contains(missingLink)) return;
+
+      hideTooltip(missingLink);
+    };
+
+    prose.addEventListener("click", handleClick);
+    prose.addEventListener("mouseleave", handleMouseLeave, true);
+
+    return () => {
+      prose.removeEventListener("click", handleClick);
+      prose.removeEventListener("mouseleave", handleMouseLeave, true);
+
+      for (const timer of tooltipTimers.values()) {
+        window.clearTimeout(timer);
+      }
+    };
+  }, [slug]);
+
   return (
     <Layout>
       <section className="section section-markdown-page">
         <div className="container">
-          <div className="markdown-prose">
+          <div ref={proseRef} className="markdown-prose">
             <div className="post-page__header">
               <div className="markdown-page__header-copy">
                 <nav className="breadcrumb" aria-label="Breadcrumb">

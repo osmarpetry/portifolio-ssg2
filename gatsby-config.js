@@ -32,6 +32,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: require.resolve("./plugins/gatsby-remark-post-wikilinks"),
+          },
+          {
             resolve: "gatsby-remark-autolink-headers",
             options: {
               offsetY: 100,

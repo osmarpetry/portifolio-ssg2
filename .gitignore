@@ -6,3 +6,4 @@ storybook-static/
 *.log
 .env
 .env.*
+test-results/.last-run.json
