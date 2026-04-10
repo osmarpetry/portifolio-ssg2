@@ -358,6 +358,7 @@ button:focus-visible {
 
 .eyebrow--center {
     text-align: center;
+    padding-bottom: 0.5rem;
 }
 
 /* Breadcrumb */
