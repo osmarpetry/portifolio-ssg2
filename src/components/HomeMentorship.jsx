@@ -1,5 +1,14 @@
 import React from "react";
 import contactProject from "../data/contact-project";
+import mentees from "../data/mentees";
+
+const getInitials = (name) =>
+  name
+    .split(" ")
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
 
 const HomeMentorship = () => (
   <section className="section section-mentorship" id="mentorship">
@@ -33,6 +42,22 @@ const HomeMentorship = () => (
           </a>
         </div>
       </div>
+
+      <ul className="mentee-list" aria-label="Mentees">
+        {mentees.map((mentee) => (
+          <li key={mentee.name} className="mentee-item">
+            <div className="mentee-avatar" aria-hidden="true">
+              {getInitials(mentee.name)}
+            </div>
+            <div className="mentee-content">
+              <span className="mentee-name">{mentee.name}</span>
+              <blockquote className="mentee-quote">
+                &ldquo;{mentee.quote}&rdquo;
+              </blockquote>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 );

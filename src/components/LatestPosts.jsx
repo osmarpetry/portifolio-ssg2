@@ -41,8 +41,8 @@ const LatestPosts = () => {
       <div className="container">
         <SectionHeading
           eyebrow="Latest writing"
-          title="Recent posts from the notes and articles archive."
-          description="Short previews from the posts page, using the same fast-scanning list rhythm as the rest of the portfolio."
+          title="Recent posts from the blog."
+          description="Short previews from the blog, using the same fast-scanning list rhythm as the rest of the portfolio."
         />
 
         <ul className="company-teaser-list home-post-list" aria-label="Latest posts">
@@ -77,7 +77,7 @@ const LatestPosts = () => {
 
         <div className="company-teaser-cta">
           <Link className="action-link action-link--tier" to="/posts/">
-            Open all posts
+            Open the blog
           </Link>
         </div>
       </div>

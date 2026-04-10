@@ -4,7 +4,9 @@ import companies from "../data/companies";
 const HomeCompanies = () => (
   <section className="section section-companies" id="companies">
     <div className="container">
-      <h2 className="section-companies__title">Companies</h2>
+      <p className="section-companies__subtitle">
+        Teams and products I've contributed to across different industries and geographies.
+      </p>
       <div className="companies-grid">
         {companies.map((company) => (
           <div key={company.slug} className="company-item" title={company.name}>

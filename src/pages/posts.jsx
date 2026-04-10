@@ -70,8 +70,12 @@ const PostsPage = ({ data }) => {
       )
     : posts;
 
+  const activeTagLabel = normalizedActive
+    ? allTags.find((t) => t.slug === normalizedActive)?.label || activeTag
+    : "";
+
   const statusText = normalizedActive
-    ? `${filteredPosts.length} post${filteredPosts.length === 1 ? "" : "s"} in ${activeTag}`
+    ? `${filteredPosts.length} post${filteredPosts.length === 1 ? "" : "s"} in ${activeTagLabel}`
     : `${allTags.length} tags`;
 
   return (
@@ -79,8 +83,24 @@ const PostsPage = ({ data }) => {
       <section className="section section-posts-index" data-posts-index>
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Posts</p>
-            <h1 id="posts-index-heading">Posts.</h1>
+            <nav className="breadcrumb" aria-label="Breadcrumb">
+              {normalizedActive ? (
+                <>
+                  <button
+                    className="breadcrumb__link"
+                    type="button"
+                    onClick={() => applyFilter("")}
+                  >
+                    Blog
+                  </button>
+                  <span className="breadcrumb__sep" aria-hidden="true">/</span>
+                  <span className="breadcrumb__current">{activeTagLabel}</span>
+                </>
+              ) : (
+                <span className="breadcrumb__current">Blog</span>
+              )}
+            </nav>
+            <h1 id="posts-index-heading">Blog.</h1>
             <p>
               Notes and articles about code, product thinking, and experiments
               published from this site.
@@ -121,6 +141,7 @@ const PostsPage = ({ data }) => {
                 <Link
                   className="posts-index-card"
                   to={`/posts/${post.fields.slug}/`}
+                  state={{ fromTag: normalizedActive || null }}
                 >
                   <div className="posts-index-card__meta">
                     <time dateTime={post.frontmatter.date}>
@@ -163,7 +184,7 @@ const PostsPage = ({ data }) => {
 export default PostsPage;
 
 export const Head = () => (
-  <Seo title="Posts — Osmar Petry" pathname="/posts/" />
+  <Seo title="Blog — Osmar Petry" pathname="/posts/" />
 );
 
 export const query = graphql`

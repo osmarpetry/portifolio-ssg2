@@ -35,6 +35,7 @@ const ResumePage = ({ data }) => {
                   strokeLinejoin="round"
                 />
               </svg>
+              <span className="resume-pdf-btn__label">Download resume</span>
             </a>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </div>

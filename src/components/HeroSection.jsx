@@ -54,57 +54,36 @@ const HeroSection = ({
               className="hero-description"
               dangerouslySetInnerHTML={{ __html: descriptionHtml }}
             />
-            {isFooterHero ? (
-              <div className="hero-actions">
+            <div className="hero-actions">
+              <a
+                className="action-link action-link--primary"
+                href="/assets/resume/osmar-petry-resume-en.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download resume
+              </a>
+              <div className="hero-socials" aria-label="Social links">
                 <a
-                  className="action-link action-link--primary"
+                  className="hero-social-link"
                   href={siteData.github}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="GitHub profile"
                 >
-                  GitHub
+                  <GithubIcon />
                 </a>
                 <a
-                  className="action-link action-link--primary"
+                  className="hero-social-link"
                   href={siteData.linkedin}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="LinkedIn profile"
                 >
-                  LinkedIn
+                  <LinkedInIcon />
                 </a>
               </div>
-            ) : (
-              <div className="hero-actions">
-                <a
-                  className="action-link action-link--primary"
-                  href="/assets/resume/osmar-petry-resume-en.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Download resume
-                </a>
-                <div className="hero-socials" aria-label="Social links">
-                  <a
-                    className="hero-social-link"
-                    href={siteData.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="GitHub profile"
-                  >
-                    <GithubIcon />
-                  </a>
-                  <a
-                    className="hero-social-link"
-                    href={siteData.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="LinkedIn profile"
-                  >
-                    <LinkedInIcon />
-                  </a>
-                </div>
-              </div>
-            )}
+            </div>
             <p className="hero-contact-line">
               Write to{" "}
               <a href={`mailto:${siteData.email}`}>{siteData.email}</a>

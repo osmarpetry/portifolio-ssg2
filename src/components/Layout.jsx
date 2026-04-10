@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import "../styles/site.css";
 
 const Layout = ({ children }) => (
-  <div id="top">
+  <div id="top" className="site-wrapper">
     <a className="skip-link" href="#main">
       Skip to content
     </a>

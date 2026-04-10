@@ -17,9 +17,9 @@ const IndexPage = () => (
       descriptionHtml='<p><strong>Senior Software Engineer</strong> with <strong>9+ years</strong> building and scaling web and mobile products across EU and US distributed teams, with a frontend-focused full stack background in React, Next.js, TypeScript, and Node.js.</p>'
     />
     <HomeCompanies />
-    <HomeMentorship />
     <FeaturedWork />
     <LatestPosts />
+    <HomeMentorship />
   </Layout>
 );
 

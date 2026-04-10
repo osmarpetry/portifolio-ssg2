@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
@@ -12,40 +12,58 @@ const formatDate = (dateStr) => {
   });
 };
 
-const PostTemplate = ({ data }) => {
+const PostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const { title, date, tags, description } = post.frontmatter;
+  const slug = post.fields.slug;
+
+  const fromTag = location?.state?.fromTag || null;
 
   return (
     <Layout>
       <section className="section section-markdown-page">
         <div className="container">
-          <div className="markdown-page__header">
-            <div className="markdown-page__header-copy">
-              <p className="eyebrow">Post</p>
-              <h1 className="markdown-page__title">{title}</h1>
-              {description && (
-                <p className="markdown-page__description">{description}</p>
-              )}
+          <div className="markdown-prose">
+            <div className="post-page__header">
+              <div className="markdown-page__header-copy">
+                <nav className="breadcrumb" aria-label="Breadcrumb">
+                  <Link className="breadcrumb__link" to="/posts/">
+                    Blog
+                  </Link>
+                  {fromTag && (
+                    <>
+                      <span className="breadcrumb__sep" aria-hidden="true">/</span>
+                      <Link
+                        className="breadcrumb__link"
+                        to={`/posts/#tag=${encodeURIComponent(fromTag)}`}
+                      >
+                        {fromTag}
+                      </Link>
+                    </>
+                  )}
+                  <span className="breadcrumb__sep" aria-hidden="true">/</span>
+                  <span className="breadcrumb__current">{slug}</span>
+                </nav>
+                <h1 className="markdown-page__title">{title}</h1>
+                {description && (
+                  <p className="markdown-page__description">{description}</p>
+                )}
+              </div>
+              <div className="markdown-page__meta">
+                <time dateTime={date}>{formatDate(date)}</time>
+                {tags && (
+                  <div className="markdown-page__tags">
+                    {tags.map((tag, i) => (
+                      <span key={i} className="markdown-page__tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="markdown-page__meta">
-              <time dateTime={date}>{formatDate(date)}</time>
-              {tags && (
-                <div className="markdown-page__tags">
-                  {tags.map((tag, i) => (
-                    <span key={i} className="markdown-page__tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
-
-          <div
-            className="markdown-prose"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
         </div>
       </section>
     </Layout>
