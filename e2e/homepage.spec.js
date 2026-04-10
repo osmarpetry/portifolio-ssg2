@@ -26,6 +26,7 @@ test.describe("Homepage", () => {
     await expect(page.locator(".mentorship-info__title")).toContainText(
       "Helping engineers grow"
     );
+    await expect(page.locator(".mentee-list .mentee-item")).toHaveCount(6);
   });
 
   test("should display featured work section", async ({ page }) => {

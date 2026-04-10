@@ -46,14 +46,24 @@ const HomeMentorship = () => (
       <ul className="mentee-list" aria-label="Mentees">
         {mentees.map((mentee) => (
           <li key={mentee.name} className="mentee-item">
-            <div className="mentee-avatar" aria-hidden="true">
-              {getInitials(mentee.name)}
+            <div className="mentee-avatar-shell" aria-hidden="true">
+              {mentee.avatar ? (
+                <img
+                  src={mentee.avatar.src}
+                  alt=""
+                  className="mentee-avatar-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <div className="mentee-avatar">{getInitials(mentee.name)}</div>
+              )}
             </div>
             <div className="mentee-content">
-              <span className="mentee-name">{mentee.name}</span>
               <blockquote className="mentee-quote">
-                &ldquo;{mentee.quote}&rdquo;
+                <p>&ldquo;{mentee.quote}&rdquo;</p>
               </blockquote>
+              <span className="mentee-name">{mentee.name}</span>
             </div>
           </li>
         ))}
