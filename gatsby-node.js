@@ -110,6 +110,9 @@ const generateOgImage = async ({ outputPath, title, description, eyebrow }) => {
     .toFile(outputPath);
 };
 
+const publicAssetToOutputPath = (assetPath) =>
+  path.resolve(__dirname, "public", assetPath.replace(/^\/+/, ""));
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve("src/templates/post.jsx");
@@ -192,7 +195,6 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
     return;
   }
 
-  const outputDir = path.resolve(__dirname, "public", "assets", "images", "og");
   const staticPages = [
     {
       ...pageMetadata.home,
@@ -214,7 +216,7 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
 
   for (const page of staticPages) {
     await generateOgImage({
-      outputPath: path.join(outputDir, path.basename(page.ogImagePath)),
+      outputPath: publicAssetToOutputPath(page.ogImagePath),
       title: page.title,
       description: page.description,
       eyebrow: page.eyebrow,
@@ -223,8 +225,10 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
 
   for (const node of result.data.allMarkdownRemark.nodes) {
     const slug = node.fields.slug;
+    const ogImagePath = pageMetadata.getPostOgImagePath(slug);
+
     await generateOgImage({
-      outputPath: path.join(outputDir, "posts", `${slug}.jpg`),
+      outputPath: publicAssetToOutputPath(ogImagePath),
       title: node.frontmatter.title,
       description: node.frontmatter.description || node.excerpt,
       eyebrow: "Blog Post",

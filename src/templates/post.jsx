@@ -291,7 +291,7 @@ export const Head = ({ data }) => {
         }),
         buildBreadcrumbJsonLd([
           { name: "Home", pathname: "/" },
-          { name: "Posts", pathname: pageMetadata.posts.pathname },
+          { name: "Blog", pathname: pageMetadata.posts.pathname },
           { name: title, pathname },
         ]),
       ]}
