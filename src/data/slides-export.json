@@ -1,0 +1,273 @@
+{
+  "slideshows_uploaded": [
+    {
+      "title": "ASP.NET Core, Angular 2, and TypeScript with Yeoman Scaffolding | Seminar",
+      "description": "Seminar developed in the fourth semester of the Information Systems bachelor's program, for the Programming Technology 2 course taught by Cleiton Garcia.",
+      "tag": ".net core angular2 typescript scaffolding yeoman",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/seminrio-asp-net-core-angular-2-e-typescript-com-scaffolding-yeoman/68075910",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=seminrio-asp-net-core-angular-2-e-typescript-com-scaffolding-yeoman"
+    },
+    {
+      "title": "Java Microservices | Seminar",
+      "description": "Seminar developed in the fourth semester of the Information Systems bachelor's program, for the Programming 4 course taught by Fabio Dippold.",
+      "tag": "java microservices",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/seminrio-java-microservices/68076106",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=seminrio-java-microservices"
+    },
+    {
+      "title": "COBIT 5 | Seminar",
+      "description": "Seminar developed in the fourth semester of the Information Systems bachelor's program, for the Process Engineering and Requirements course taught by Fabio Dippold.",
+      "tag": "",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/cobit-5-seminrio/69650163",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=cobit-5-seminrio"
+    },
+    {
+      "title": "NoSQL, MongoDB, and MEAN",
+      "description": "Seminar developed in the fourth semester of the Information Systems bachelor's program, for the Database Systems 2 course taught by Leonardo Vitazik Neto.",
+      "tag": "nosql mongodb mean angular express nodejs mongoose",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/nosql-mongodb-e-mean/69650343",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=nosql-mongodb-e-mean"
+    },
+    {
+      "title": "Continuous Integration with Maven and Jenkins",
+      "description": "Seminar developed in the fourth semester of the Information Systems bachelor's program, for the Programming 5 course taught by Leonardo Vitazik Neto.",
+      "tag": "maven,jenkins,java,catolica,software,agile software development,software development,integration,continuous integration",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/integrao-contnua-com-maven-e-jenkins/80814826",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=integrao-contnua-com-maven-e-jenkins"
+    },
+    {
+      "title": "Process Mining, Process Discovery, and Prediction",
+      "description": "Seminar developed in the fifth semester of the Information Systems bachelor's program, for a course taught by Cleiton Garcia.",
+      "tag": "process,process mining,process discovery,process prediction,process discovery and prediction,prediction,discovery,mining,disco,bpm,erp",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/process-mining-process-discovery-and-prediction/80814893",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=process-mining-process-discovery-and-prediction"
+    },
+    {
+      "title": "Ghost CMS Tool",
+      "description": "Presentation about the Ghost CMS tool, developed in the sixth semester of the Information Systems bachelor's program.",
+      "tag": "ghost,ghost.org,ghost.io,cms,nodejs,node,open source",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://www.slideshare.net/slideshow/ferramenta-ghost-cms/91064848",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=ferramenta-ghost-cms"
+    },
+    {
+      "title": "Raspberry Pi",
+      "description": "Presentation about Raspberry Pi and IoT in the seventh semester of the Information Systems bachelor's program.",
+      "tag": "raspberry pi,raspberry,iot,farmbot,automation",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/raspberry-pi-102446689/102446689",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=raspberry-pi-102446689"
+    },
+    {
+      "title": "Knowledge Management",
+      "description": "Presentation about knowledge management in the eighth semester of the Information Systems bachelor's program.",
+      "tag": "gestão,conhecimento,gestão de conhecimento,católica,sistemas,sistemas de informação",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/gesto-de-conhecimento-126404245/126404245",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=gesto-de-conhecimento-126404245"
+    },
+    {
+      "title": "Continuity and Availability Management in ITIL v3 2011 (Current Version)",
+      "description": "Presentation about ITIL in the eighth semester of the Information Systems bachelor's program.",
+      "tag": "itil,catolica,sistemas de infromação,sistemas,gestão",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/gerenciamento-de-continuidade-e-disponibilidade-na-itil-v3-2011-verso-atual/126404311",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=gerenciamento-de-continuidade-e-disponibilidade-na-itil-v3-2011-verso-atual"
+    },
+    {
+      "title": "Computational Mathematics: Area Calculation Using Integrals",
+      "description": "Presentation created for the computational mathematics course in the Information Systems program for professor Jaisson dos Reis at Catolica Jaragua do Sul.",
+      "tag": "mathematics,math,matemática,matematica computacional,integral,calculo de área",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/matemtica-computacional-clculo-de-reas-usando-integrais/148034022",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=matemtica-computacional-clculo-de-reas-usando-integrais"
+    },
+    {
+      "title": "Probability and Statistics: Linear, Quadratic, and Exponential Regression",
+      "description": "Presentation created for the probability and statistics course in the Information Systems program for professor Jaisson dos Reis at Catolica Jaragua do Sul.",
+      "tag": "mamtemática,calculo,estatistica,probabilidade,regressão,linear,quadrática,exponencial,r",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/probabilidade-e-estatstica-regresso-linear-quadrtica-e-exponencial/148034390",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=probabilidade-e-estatstica-regresso-linear-quadrtica-e-exponencial"
+    },
+    {
+      "title": "Discrete Mathematics: Hamming Code",
+      "description": "Presentation created for the discrete mathematics course in the Information Systems program for professor Jaisson dos Reis at Catolica Jaragua do Sul.",
+      "tag": "matemática,discreta,código de hamming,correção de erro,redes",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/matemtica-discreta-cdigo-de-hamming/148034725",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=matemtica-discreta-cdigo-de-hamming"
+    },
+    {
+      "title": "Beginner Functional Programming Workshop",
+      "description": "Basic introduction to functional programming through a functional language.\n\nI prepared it with the goal of not scaring anyone, while still using a language that coworkers had shown mutual interest in.\n\nClasses were given between January and February 2020.",
+      "tag": "funcional,functional,clojure,zup,introduction,introdução",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/aulo-iniciante-de-programao-funcional/242857055",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=aulo-iniciante-de-programao-funcional"
+    },
+    {
+      "title": "Beginner Clojure REST Workshop",
+      "description": "Basic introduction to functional programming through a functional language.\n\nI prepared it with the goal of not scaring anyone, while still using a language that coworkers had shown mutual interest in.\n\nClasses were given between January and February 2020.",
+      "tag": "introduction,introdução,functional,funcional,clojure,zup",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/aulo-iniciante-de-clojure-rest/242857145",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=aulo-iniciante-de-clojure-rest"
+    },
+    {
+      "title": "Beginner Programming with Clojure Workshop",
+      "description": "Basic introduction to functional programming through a functional language.\n\nI prepared it with the goal of not scaring anyone, while still using a language that coworkers had shown mutual interest in.\n\nClasses were given between January and February 2020.",
+      "tag": "funcional,functional,clojure,zup,introduction,intrrodução",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/aulo-iniciante-de-programao-com-clojure/242857146",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=aulo-iniciante-de-programao-com-clojure"
+    },
+    {
+      "title": "Design Patterns",
+      "description": "Presentation about design patterns.\n\nIt was based on the book \"Design Patterns: Elements of Reusable Object-Oriented Software\" and on the website https://refactoring.guru/design-patterns.\n\nVideo of the 2020 presentation: https://youtu.be/Gbb8MxTDhWA",
+      "tag": "design patterns,guru,gang of four",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/design-patterns-242857815/242857815",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=design-patterns-242857815"
+    },
+    {
+      "title": "Design Tokens",
+      "description": "Presentation about design tokens, shared through the Cubuca ritual of frontend developers.",
+      "tag": "cubuca,frontend,design tokens",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/design-tokens/242857816",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=design-tokens"
+    },
+    {
+      "title": "Flutter",
+      "description": "Presentation about Flutter, shared through the Cubuca ritual of frontend developers.",
+      "tag": "flutter,frontend,cubuca",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/flutter-242857817/242857817",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=flutter-242857817"
+    },
+    {
+      "title": "Observables RxJS",
+      "description": "Presentation about RxJS observables, shared through the Cubuca ritual of frontend developers.",
+      "tag": "observables rxjs,frontend,cubuca",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/observables-rxjs/242857818",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=observables-rxjs"
+    },
+    {
+      "title": "Introduction to React",
+      "description": "Introductory presentation about React. I presented it in a way that would not scare beginners.\n\nAll sensitive information was removed, and the presentation was turned into images to prevent the slides from being downloaded or extracted to bypass the redactions.",
+      "tag": "luizalbas,frontend,react,introduction",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/imagetopdf-5-242857819/242857819",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=imagetopdf-5-242857819"
+    },
+    {
+      "title": "Publishing an NPM Package at Zup",
+      "description": "Presentation about how to publish NPM packages at Zup, shared through the Cubuca ritual of frontend developers.\n\nAll sensitive information was removed, and the presentation was turned into images to prevent the slides from being downloaded or extracted to bypass the redactions.",
+      "tag": "npm,zup,publicar,cubuca",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/publicar-pacote-npm-na-zup/242857820",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=publicar-pacote-npm-na-zup"
+    },
+    {
+      "title": "React Query Library",
+      "description": "Presentation about React Query, shared through the Fishbowl ritual of frontend developers.",
+      "tag": "react-query,cubuca,frontend",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/biblioteca-reactquery/242857821",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=biblioteca-reactquery"
+    },
+    {
+      "title": "Testing in Continuous Integration",
+      "description": "Presentation about testing in continuous integration, shared through the Cubuca ritual of frontend developers.",
+      "tag": "cubuca,frontend,testes,ci/cd",
+      "category": "presentation",
+      "language": "en",
+      "privacy": "public",
+      "url": "https://pt.slideshare.net/slideshow/testes-em-integrao-contnua/242857822",
+      "download_url": "https://www.slideshare.net/dwnld_file?s_title=testes-em-integrao-contnua"
+    }
+  ],
+  "comments": [],
+  "following_users": [
+    "AmazonWebServices",
+    "rodrigobranas",
+    "nirkaufman",
+    "jonathanbeber"
+  ],
+  "account_registration": {
+    "login": "OsmarPetry",
+    "email": "osmarpetry@gmail.com",
+    "created_at": "2012-11-19T12:45:29.000Z",
+    "occupation": "Javascript and Web Developer",
+    "organization": "",
+    "first_name": "Osmar",
+    "last_name": "Petry",
+    "about": "",
+    "website": "https://github.com/osmarpetry/",
+    "industry": "Technology / Software / Internet",
+    "profile_photo_url": "https://cdn.slidesharecdn.com/profile-photo-OsmarPetry-96x96.jpg?cb=1775945864"
+  },
+  "contact_details": {
+    "twitter": null,
+    "facebook": null,
+    "linkedin": "https://www.linkedin.com/in/osmarpetry",
+    "gplus": null,
+    "city": "Joinville Area, Brazil",
+    "region": "Santa Catarina",
+    "country": "Brazil"
+  }
+}

@@ -17,37 +17,29 @@ export default {
 };
 
 const slideWithThumb = {
-  slug: "nosql-mongodb-mean",
-  title: "NoSQL, MongoDB e MEAN",
+  slug: "nosql-mongodb-e-mean",
+  title: "NoSQL, MongoDB, and MEAN",
   url: "https://www.slideshare.net/slideshow/nosql-mongodb-e-mean/69650343",
-  views: 291,
-  slideCount: 0,
-  thumbnail:
-    "https://cdn.slidesharecdn.com/ss_thumbnails/nosqlmongodbmean-161129190639-thumbnail.jpg?width=640&height=640&fit=bounds",
-  publishedDate: "2016-11",
-  topics: ["NoSQL", "MongoDB", "MEAN Stack"],
+  pdfPath: "/assets/pdfs/slides/nosql-mongodb-e-mean.pdf",
+  thumbnail: "/assets/images/slides/nosql-mongodb-e-mean.jpg",
+  topics: ["NoSQL", "MongoDB", "MEAN"],
 };
 
 const slideNoThumb = {
-  slug: "react-query",
-  title: "Biblioteca React-Query",
+  slug: "biblioteca-reactquery",
+  title: "React Query Library",
   url: "https://www.slideshare.net/slideshow/biblioteca-reactquery/242857821",
-  views: 34,
-  slideCount: 16,
+  pdfPath: "/assets/pdfs/slides/biblioteca-reactquery.pdf",
   thumbnail: "",
-  publishedDate: "2021-02",
-  topics: ["React", "React-Query", "Frontend"],
+  topics: ["React Query", "Frontend"],
 };
 
 const slideNoViews = {
-  slug: "design-patterns",
+  slug: "design-patterns-242857815",
   title: "Design Patterns",
   url: "https://www.slideshare.net/slideshow/design-patterns-242857815/242857815",
-  views: 0,
-  slideCount: 0,
-  thumbnail:
-    "https://cdn.slidesharecdn.com/ss_thumbnails/imagetopdf1-210216201357-thumbnail.jpg?width=640&height=640&fit=bounds",
-  publishedDate: "2021-02",
+  pdfPath: "/assets/pdfs/slides/design-patterns-242857815.pdf",
+  thumbnail: "/assets/images/slides/design-patterns-242857815.jpg",
   topics: ["Design Patterns", "Software Engineering"],
 };
 

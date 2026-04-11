@@ -6,45 +6,53 @@ const SlideCard = ({ slide }) => {
   const imgSrc = slide.thumbnail || PLACEHOLDER_SRC;
 
   return (
-    <a
-      className="slide-card"
-      href={slide.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={`Open "${slide.title}" on SlideShare`}
-    >
-      <div className="slide-card__thumb-wrap">
-        <img
-          className="slide-card__thumb"
-          src={imgSrc}
-          alt={`Thumbnail for ${slide.title}`}
-          loading="lazy"
-          width={320}
-          height={180}
-        />
-      </div>
-      <div className="slide-card__body">
-        <h3 className="slide-card__title">{slide.title}</h3>
-        {slide.description && (
-          <p className="slide-card__description">{slide.description}</p>
-        )}
-        <div className="slide-card__meta">
-          {slide.views > 0 && (
-            <span className="slide-card__views">
-              {slide.views.toLocaleString()} views
-            </span>
-          )}
-          {slide.topics.slice(0, 2).map((topic, i) => (
-            <span key={i} className="slide-card__topic">
-              {topic}
-            </span>
-          ))}
+    <article className="slide-card">
+      <a
+        className="slide-card__link"
+        href={slide.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={`Open "${slide.title}" on SlideShare`}
+      >
+        <div className="slide-card__thumb-wrap">
+          <img
+            className="slide-card__thumb"
+            src={imgSrc}
+            alt={`Thumbnail for ${slide.title}`}
+            loading="lazy"
+            width={320}
+            height={180}
+          />
         </div>
+        <div className="slide-card__body">
+          <h3 className="slide-card__title">{slide.title}</h3>
+          {slide.description && (
+            <p className="slide-card__description">{slide.description}</p>
+          )}
+          <div className="slide-card__meta">
+            {slide.topics.slice(0, 2).map((topic, i) => (
+              <span key={i} className="slide-card__topic">
+                {topic}
+              </span>
+            ))}
+          </div>
+        </div>
+        <span className="slide-card__external" aria-hidden="true">
+          ↗
+        </span>
+      </a>
+
+      <div className="slide-card__actions">
+        <a
+          className="slide-card__download"
+          href={slide.pdfPath}
+          download={`${slide.slug}.pdf`}
+          title={`Download "${slide.title}" as PDF`}
+        >
+          Download PDF
+        </a>
       </div>
-      <span className="slide-card__external" aria-hidden="true">
-        ↗
-      </span>
-    </a>
+    </article>
   );
 };
 

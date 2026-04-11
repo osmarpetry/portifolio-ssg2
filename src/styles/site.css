@@ -2657,8 +2657,6 @@ li {
 
 .slide-card {
     position: relative;
-    display: flex;
-    flex-direction: column;
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     background: linear-gradient(
@@ -2671,6 +2669,13 @@ li {
     color: inherit;
     overflow: hidden;
     transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.slide-card__link {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    text-decoration: none;
 }
 
 .slide-card:hover {
@@ -2761,10 +2766,47 @@ li {
     opacity: 1;
 }
 
+.slide-card__actions {
+    padding: 0 1rem 1rem;
+}
+
+.slide-card__download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    width: 100%;
+    border: 1px solid rgba(82, 66, 124, 0.22);
+    border-radius: 999px;
+    background: rgba(108, 90, 154, 0.08);
+    color: var(--purple-dark);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition:
+        background 0.15s,
+        border-color 0.15s,
+        color 0.15s;
+}
+
+.slide-card__download:hover {
+    background: rgba(108, 90, 154, 0.12);
+    border-color: rgba(82, 66, 124, 0.35);
+    color: var(--purple-dark);
+}
+
 /* ── Featured Slides (home page) ── */
 
 .section-home-slides {
     padding-top: 0;
+}
+
+.home-slide-item__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
 }
 
 .home-slide-item__link {
@@ -2789,10 +2831,47 @@ li {
     flex-shrink: 0;
 }
 
+.home-slide-item__download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.35rem;
+    padding: 0 0.9rem;
+    border: 1px solid rgba(82, 66, 124, 0.22);
+    border-radius: 999px;
+    background: rgba(108, 90, 154, 0.08);
+    color: var(--purple-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        background 0.15s,
+        border-color 0.15s,
+        color 0.15s;
+}
+
+.home-slide-item__download:hover {
+    background: rgba(108, 90, 154, 0.12);
+    border-color: rgba(82, 66, 124, 0.35);
+    color: var(--purple-dark);
+}
+
 /* ── Slides responsive ── */
 
 @media (max-width: 700px) {
     .slides-gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    .home-slide-item__row {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .home-slide-item__download {
+        width: 100%;
+        margin-bottom: 0.9rem;
     }
 }
