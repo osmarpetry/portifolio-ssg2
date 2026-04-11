@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection";
 import HomeCompanies from "../components/HomeCompanies";
 import HomeMentorship from "../components/HomeMentorship";
 import FeaturedWork from "../components/FeaturedWork";
+import FeaturedSlides from "../components/FeaturedSlides";
 import LatestPosts from "../components/LatestPosts";
 import pageMetadata from "../data/page-metadata";
 import { buildPersonJsonLd, buildWebSiteJsonLd } from "../utils/structuredData";
@@ -20,6 +21,7 @@ const IndexPage = () => (
     />
     <HomeCompanies />
     <FeaturedWork />
+    <FeaturedSlides />
     <LatestPosts />
     {
       //<HomeMentorship />

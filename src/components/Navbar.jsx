@@ -68,6 +68,9 @@ const Navbar = () => {
           <Link className="nav-link" to="/blog/" onClick={close}>
             Blog
           </Link>
+          <Link className="nav-link" to="/slides/" onClick={close}>
+            Slides
+          </Link>
         </div>
       </div>
     </nav>

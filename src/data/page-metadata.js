@@ -27,6 +27,13 @@ const pageMetadata = {
       "Resume and experience summary for Osmar Petry, covering senior software engineering work across EU and US distributed product teams.",
     ogImagePath: "/assets/images/og/resume.jpg",
   },
+  slides: {
+    pathname: "/slides/",
+    title: "Slides — Osmar Petry",
+    description:
+      "SlideShare presentations from tech talks, university seminars, and knowledge-sharing sessions on frontend, DevOps, and IT governance topics.",
+    ogImagePath: "/assets/images/og/home.jpg",
+  },
   notFound: {
     pathname: "/404/",
     title: "404 — Osmar Petry",
