@@ -8,8 +8,9 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "build": "gatsby build",
-    "analyze:build": "ANALYZE_BUNDLE=true gatsby build",
+    "sync:slides": "node scripts/sync-slides.js",
+    "build": "npm run sync:slides && gatsby build",
+    "analyze:build": "npm run sync:slides && ANALYZE_BUNDLE=true gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test:e2e": "playwright test",

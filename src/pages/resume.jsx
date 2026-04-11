@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import pageMetadata from "../data/page-metadata";
@@ -17,6 +18,13 @@ const ResumePage = ({ data }) => {
     <Layout>
       <section className="section section-markdown-page">
         <div className="container">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <Link className="breadcrumb__link" to="/">
+              Home
+            </Link>
+            <span className="breadcrumb__sep" aria-hidden="true">/</span>
+            <span className="breadcrumb__current">Resume</span>
+          </nav>
           <div className="markdown-prose resume-prose">
             <a
               className="resume-pdf-btn"

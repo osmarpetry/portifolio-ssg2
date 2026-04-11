@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
@@ -19,7 +20,13 @@ const ProjectsPage = () => (
     >
       <div className="container">
         <div className="section-heading">
-          <p className="eyebrow">Independent work</p>
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <Link className="breadcrumb__link" to="/">
+              Home
+            </Link>
+            <span className="breadcrumb__sep" aria-hidden="true">/</span>
+            <span className="breadcrumb__current">Projects</span>
+          </nav>
           <h1 id="projects-index-heading">Projects.</h1>
           <p>
             Selected builds, experiments, and technical assessments across

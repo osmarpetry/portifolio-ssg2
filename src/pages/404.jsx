@@ -3,6 +3,7 @@ import { Link, navigate } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import pageMetadata from "../data/page-metadata";
+import { buildBreadcrumbJsonLd } from "../utils/structuredData";
 
 const handleGoBack = () => {
   if (typeof window === "undefined") return;
@@ -39,6 +40,13 @@ const NotFoundPage = () => (
   <Layout>
     <section className="section section-not-found">
       <div className="container">
+        <nav className="breadcrumb" aria-label="Breadcrumb">
+          <Link className="breadcrumb__link" to="/">
+            Home
+          </Link>
+          <span className="breadcrumb__sep" aria-hidden="true">/</span>
+          <span className="breadcrumb__current">404</span>
+        </nav>
         <div className="not-found-card">
           <p className="eyebrow">404</p>
           <h1 className="not-found-title">Page not found.</h1>
@@ -74,5 +82,11 @@ export const Head = () => (
     pathname={pageMetadata.notFound.pathname}
     image={pageMetadata.notFound.ogImagePath}
     noindex
+    jsonLd={[
+      buildBreadcrumbJsonLd([
+        { name: "Home", pathname: "/" },
+        { name: "404", pathname: pageMetadata.notFound.pathname },
+      ]),
+    ]}
   />
 );

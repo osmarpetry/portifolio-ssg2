@@ -25,6 +25,9 @@ const SlideCard = ({ slide }) => {
       </div>
       <div className="slide-card__body">
         <h3 className="slide-card__title">{slide.title}</h3>
+        {slide.description && (
+          <p className="slide-card__description">{slide.description}</p>
+        )}
         <div className="slide-card__meta">
           {slide.views > 0 && (
             <span className="slide-card__views">

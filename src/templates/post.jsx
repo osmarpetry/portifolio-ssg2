@@ -202,6 +202,10 @@ const PostTemplate = ({ data, location }) => {
             <div className="post-page__header">
               <div className="markdown-page__header-copy">
                 <nav className="breadcrumb" aria-label="Breadcrumb">
+                  <Link className="breadcrumb__link" to="/">
+                    Home
+                  </Link>
+                  <span className="breadcrumb__sep" aria-hidden="true">/</span>
                   <Link className="breadcrumb__link" to="/blog/">
                     Blog
                   </Link>

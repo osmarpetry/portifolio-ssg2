@@ -90,6 +90,10 @@ const PostsPage = ({ data }) => {
         <div className="container">
           <div className="section-heading">
             <nav className="breadcrumb" aria-label="Breadcrumb">
+              <Link className="breadcrumb__link" to="/">
+                Home
+              </Link>
+              <span className="breadcrumb__sep" aria-hidden="true">/</span>
               <button
                 className="breadcrumb__link"
                 type="button"

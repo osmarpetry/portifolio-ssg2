@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import SlidesGallery from "../components/SlidesGallery";
@@ -14,9 +15,9 @@ const SlidesPage = () => (
       <div className="container">
         <div className="section-heading">
           <nav className="breadcrumb" aria-label="Breadcrumb">
-            <a className="breadcrumb__link" href="/">
+            <Link className="breadcrumb__link" to="/">
               Home
-            </a>
+            </Link>
             <span className="breadcrumb__sep" aria-hidden="true">/</span>
             <span className="breadcrumb__current">Slides</span>
           </nav>
