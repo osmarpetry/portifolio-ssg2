@@ -1980,12 +1980,9 @@ li {
 
 .section-markdown-page,
 .section-posts-index,
-.section-slides-page {
-    padding: var(--space-5) 0;
-}
-
+.section-slides-page,
 .section-not-found {
-    padding-top: var(--space-6);
+    padding: var(--space-5) 0;
 }
 
 .not-found-card {
