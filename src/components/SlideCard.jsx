@@ -9,10 +9,10 @@ const SlideCard = ({ slide }) => {
     <article className="slide-card">
       <a
         className="slide-card__link"
-        href={slide.url}
+        href={slide.pdfPath}
         target="_blank"
-        rel="noopener noreferrer"
-        title={`Open "${slide.title}" on SlideShare`}
+        rel="noreferrer"
+        title={`Open "${slide.title}" PDF in a new tab`}
       >
         <div className="slide-card__thumb-wrap">
           <img
@@ -41,17 +41,6 @@ const SlideCard = ({ slide }) => {
           ↗
         </span>
       </a>
-
-      <div className="slide-card__actions">
-        <a
-          className="slide-card__download"
-          href={slide.pdfPath}
-          download={`${slide.slug}.pdf`}
-          title={`Download "${slide.title}" as PDF`}
-        >
-          Download PDF
-        </a>
-      </div>
     </article>
   );
 };

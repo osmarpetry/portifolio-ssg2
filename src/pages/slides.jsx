@@ -23,8 +23,8 @@ const SlidesPage = () => (
           </nav>
           <h1>Slides.</h1>
           <p>
-            Presentation decks from talks, workshops, and university seminars.
-            Open the original SlideShare page or download the local PDF copy.
+            Presentation decks from talks, workshops, and university seminars I
+            have given.
           </p>
         </div>
 

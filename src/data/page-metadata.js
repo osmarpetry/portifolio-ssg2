@@ -31,7 +31,7 @@ const pageMetadata = {
     pathname: "/slides/",
     title: "Slides — Osmar Petry",
     description:
-      "SlideShare presentations from tech talks, university seminars, and knowledge-sharing sessions on frontend, DevOps, and IT governance topics.",
+      "Presentation decks from talks, workshops, and university seminars given by Osmar Petry across frontend, DevOps, and software engineering topics.",
     ogImagePath: "/assets/images/og/home.jpg",
   },
   notFound: {

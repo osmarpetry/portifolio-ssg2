@@ -9,42 +9,32 @@ const FeaturedSlides = () => (
       <SectionHeading
         eyebrow="Presentations"
         title="Slides from talks, workshops, and seminars."
-        description="Recent SlideShare decks with local PDF downloads and the original SlideShare links."
+        description="A selection of presentation decks from talks, workshops, and seminars I have given."
       />
 
       <ul className="company-teaser-list home-slide-list" aria-label="Featured slides">
         {featuredSlides.map((slide) => (
           <li key={slide.slug} className="company-teaser-item home-slide-item">
-            <div className="home-slide-item__row">
-              <a
-                className="company-teaser-item__link home-slide-item__link"
-                href={slide.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="company-teaser-item__name home-slide-item__name">
-                  {slide.title}
-                </span>
-                <span className="company-teaser-item__meta home-slide-item__meta">
-                  {slide.topics.slice(0, 2).map((topic, i) => (
-                    <span
-                      key={i}
-                      className="company-teaser-item__count home-slide-item__chip"
-                    >
-                      {topic}
-                    </span>
-                  ))}
-                </span>
-              </a>
-
-              <a
-                className="home-slide-item__download"
-                href={slide.pdfPath}
-                download={`${slide.slug}.pdf`}
-              >
-                Download PDF
-              </a>
-            </div>
+            <a
+              className="company-teaser-item__link home-slide-item__link"
+              href={slide.pdfPath}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="company-teaser-item__name home-slide-item__name">
+                {slide.title}
+              </span>
+              <span className="company-teaser-item__meta home-slide-item__meta">
+                {slide.topics.slice(0, 2).map((topic, i) => (
+                  <span
+                    key={i}
+                    className="company-teaser-item__count home-slide-item__chip"
+                  >
+                    {topic}
+                  </span>
+                ))}
+              </span>
+            </a>
           </li>
         ))}
       </ul>
