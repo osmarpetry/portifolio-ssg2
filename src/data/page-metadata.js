@@ -3,7 +3,7 @@ const pageMetadata = {
     pathname: "/",
     title: "Osmar Petry",
     description:
-      "Senior Software Engineer focused on frontend-heavy product work across React, Next.js, TypeScript, Node.js, performance, testing, and maintainable delivery.",
+      "Luxembourgish Senior Software Engineer focused on frontend-heavy product work across React, Next.js, TypeScript, Node.js, performance, testing, and maintainable delivery.",
     ogImagePath: "/assets/images/og/home.jpg",
   },
   projects: {
@@ -24,7 +24,7 @@ const pageMetadata = {
     pathname: "/resume/",
     title: "Resume — Osmar Petry",
     description:
-      "Resume and experience summary for Osmar Petry, covering senior software engineering work across EU and US distributed product teams.",
+      "Resume and experience summary for Osmar Petry, a Luxembourgish Senior Software Engineer covering work across EU and US distributed product teams.",
     ogImagePath: "/assets/images/og/resume.jpg",
   },
   slides: {

@@ -79,7 +79,7 @@ const HeroSection = ({
             <div className="hero-actions">
               <a
                 className="action-link action-link--primary"
-                href="/assets/resume/osmar-petry-resume-en.pdf"
+                href="/assets/resume/resume-osmarpetry.pdf"
                 target="_blank"
                 rel="noreferrer"
               >

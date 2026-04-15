@@ -28,7 +28,7 @@ const ResumePage = ({ data }) => {
           <div className="markdown-prose resume-prose">
             <a
               className="resume-pdf-btn"
-              href="/assets/resume/osmar-petry-resume-en.pdf"
+              href="/assets/resume/resume-osmarpetry.pdf"
               target="_blank"
               rel="noreferrer"
               aria-label="Download resume as PDF"

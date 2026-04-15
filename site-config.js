@@ -4,7 +4,7 @@ const siteConfig = {
   alternateName: ["Osmar Petry Portfolio", "osmarpetry.dev"],
   url: "https://osmarpetry.dev",
   description:
-    "Senior Software Engineer with 9+ years building web and mobile products across EU and US distributed teams.",
+    "Luxembourgish Senior Software Engineer with 9+ years building web and mobile products across EU and US distributed teams.",
   themeColor: "#6c5a9a",
   backgroundColor: "#f7f3ed",
   language: "en-US",

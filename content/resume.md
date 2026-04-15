@@ -13,7 +13,7 @@
 
 ## Summary
 
-Senior Software Engineer with 9+ years of experience building and scaling web and mobile products across EU and US distributed teams. Frontend-focused full stack background in React, Next.js, TypeScript, and Node.js, with hands-on delivery across product platforms, backend integrations, testing, performance, and developer experience.
+Luxembourgish Senior Software Engineer with 9+ years of experience building and scaling web and mobile products across EU and US distributed teams. Frontend-focused full stack background in React, Next.js, TypeScript, and Node.js, with hands-on delivery across product platforms, backend integrations, testing, performance, and developer experience.
 
 ## Core Skills
 
