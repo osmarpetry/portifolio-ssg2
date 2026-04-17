@@ -19,6 +19,8 @@ const siteConfig = {
   defaultSocialImagePath: "/assets/images/og/home.jpg",
   socialImageWidth: 1200,
   socialImageHeight: 630,
+  googleAnalyticsTrackingId:
+    process.env.GATSBY_GA_MEASUREMENT_ID || "G-3STVN66PY5",
   currentYear: new Date().getFullYear(),
 };
 

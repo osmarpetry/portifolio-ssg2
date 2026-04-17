@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import GoogleAnalytics from "./GoogleAnalytics";
 
 const resolveUrl = (siteUrl, value = "/") => new URL(value, siteUrl).toString();
 
@@ -96,7 +95,6 @@ const Seo = ({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
-      <GoogleAnalytics />
     </>
   );
 };
