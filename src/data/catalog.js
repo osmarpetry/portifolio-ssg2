@@ -2,13 +2,13 @@ import projects from "./projects";
 
 const PROJECT_SLUGS_WITH_IMAGES = new Set([
   "jeff-next",
-  "responsive-typing-trainer-app",
-  "osmarpetry-me",
+  "echo-coach-lingue",
+  "portfolio-gatsby-v1",
   "portifolio-eleventry",
-  "roast-my-lading-slc-next",
+  "roast-my-landing",
   "portifolio-notion",
-  "chargebee-brevo-demo",
-  "rick-et-morty",
+  "chargebee-brevo-sync",
+  "citadel-character-atlas",
   "flowers-city",
   "my-accounts",
   "felippe",
@@ -51,10 +51,10 @@ function deriveProject(project) {
 
 const derivedProjects = projects.map(deriveProject);
 const homePreviewProjectSlugs = [
-  "responsive-typing-trainer-app",
-  "roast-my-lading-slc-next",
-  "chargebee-brevo-demo",
-  "rick-et-morty",
+  "echo-coach-lingue",
+  "roast-my-landing",
+  "chargebee-brevo-sync",
+  "citadel-character-atlas",
 ];
 
 const projectsByTier = { 1: [], 2: [], 3: [] };

@@ -10,32 +10,32 @@ const projects = [
     links: [{ label: "GitHub", url: "https://github.com/osmarpetry/jeff-next" }],
   },
   {
-    slug: "responsive-typing-trainer-app",
-    title: "Responsive Typing Trainer App",
+    slug: "echo-coach-lingue",
+    title: "Echo Coach Lingue",
     tier: 1,
     summary:
-      "Responsive typing practice app with live accuracy, speed feedback, session controls, and a polished Vite/React interface.",
+      "Language-learning typing trainer with custom Markdown practice, TTS listening, typing-speed benchmarking, and pronunciation context links through Forvo and YouGlish.",
     stack: ["React", "Vite", "Material UI", "Tailwind CSS"],
-    repos: ["Responsive-Typing-Trainer-App"],
+    repos: ["echo-coach-lingue"],
     links: [
       { label: "Live", url: "https://charming-twilight-c65b0b.netlify.app/" },
       {
         label: "GitHub",
-        url: "https://github.com/osmarpetry/Responsive-Typing-Trainer-App",
+        url: "https://github.com/osmarpetry/echo-coach-lingue",
       },
     ],
   },
   {
-    slug: "osmarpetry-me",
-    title: "osmarpetry.me",
+    slug: "portfolio-gatsby-v1",
+    title: "Portfolio Gatsby V1",
     tier: 1,
     summary:
-      "Gatsby personal blog and portfolio archive with Markdown content, Decap CMS, styled-components, and Netlify deployment.",
+      "First Gatsby portfolio and blog version for Osmar Petry, preserved as an archive of the earlier personal site implementation.",
     stack: ["Gatsby", "React", "Styled Components", "Decap CMS"],
-    repos: ["osmarpetry.me"],
+    repos: ["portfolio-gatsby-v1"],
     links: [
       { label: "Live", url: "https://osmarpetryme.netlify.app/" },
-      { label: "GitHub", url: "https://github.com/osmarpetry/osmarpetry.me" },
+      { label: "GitHub", url: "https://github.com/osmarpetry/portfolio-gatsby-v1" },
     ],
   },
   {
@@ -55,17 +55,17 @@ const projects = [
     ],
   },
   {
-    slug: "roast-my-lading-slc-next",
-    title: "Roast My Landing SLC Next",
+    slug: "roast-my-landing",
+    title: "Roast My Landing",
     tier: 1,
     summary:
-      "Single-page landing-page audit app that runs Lighthouse, stores scan artifacts, streams AI roast feedback, and exposes provider status.",
+      "Landing-page audit app that reviews a website and returns three focused tips across marketing, SEO, and performance.",
     stack: ["Next.js 16", "Lighthouse", "OpenAI", "Postgres"],
-    repos: ["roast-my-lading-slc-next"],
+    repos: ["roast-my-landing"],
     links: [
       {
         label: "GitHub",
-        url: "https://github.com/osmarpetry/roast-my-lading-slc-next",
+        url: "https://github.com/osmarpetry/roast-my-landing",
       },
     ],
   },
@@ -86,29 +86,29 @@ const projects = [
     ],
   },
   {
-    slug: "chargebee-brevo-demo",
-    title: "ChargeBee + Brevo Demo",
+    slug: "chargebee-brevo-sync",
+    title: "Chargebee Brevo Sync",
     tier: 1,
     summary:
-      "Webhook-driven billing and CRM sync demo built around ChargeBee events, Brevo contact updates, and a stateless Next.js flow.",
+      "Webhook-driven billing and CRM sync demo built around Chargebee events, Brevo contact updates, and a stateless Next.js flow.",
     stack: ["Next.js 15", "TypeScript", "Vitest", "Playwright"],
-    repos: ["chargebee-brevo-demo"],
+    repos: ["chargebee-brevo-sync"],
     links: [
       { label: "Live", url: "https://demo.osmarpetry.dev" },
-      { label: "GitHub", url: "https://github.com/osmarpetry/chargebee-brevo-demo" },
+      { label: "GitHub", url: "https://github.com/osmarpetry/chargebee-brevo-sync" },
     ],
   },
   {
-    slug: "rick-et-morty",
-    title: "Rick and Morty Character Explorer",
+    slug: "citadel-character-atlas",
+    title: "Citadel Character Atlas",
     tier: 1,
     summary:
-      "Responsive character browser with GraphQL search, filters, pagination, localization, and a detail drawer on top of the Rick and Morty API.",
+      "Responsive Rick and Morty API character browser with GraphQL search, filters, pagination, localization, and a detail drawer.",
     stack: ["Next.js 15", "GraphQL", "Storybook", "Playwright"],
-    repos: ["rick-et-morty"],
+    repos: ["citadel-character-atlas"],
     links: [
       { label: "Live", url: "https://rick-et-morty-2025.netlify.app/" },
-      { label: "GitHub", url: "https://github.com/osmarpetry/rick-et-morty" },
+      { label: "GitHub", url: "https://github.com/osmarpetry/citadel-character-atlas" },
     ],
   },
   {
