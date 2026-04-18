@@ -1,10 +1,10 @@
 const projects = [
   {
     slug: "jeff-next",
-    title: "Jeff Next / Tempo",
+    title: "Jeff",
     tier: 1,
     summary:
-      "Next.js platform prototype for therapy operations, with marketing pages, role-based app routes, auth, billing, agenda, and local service adapters.",
+      "White-label platform for marketing and scheduling professional services, with therapy as the default vertical and company-funded credits for workers.",
     stack: ["Next.js 16", "React 19", "Drizzle", "Playwright"],
     repos: ["jeff-next"],
     links: [{ label: "GitHub", url: "https://github.com/osmarpetry/jeff-next" }],
