@@ -1,5 +1,91 @@
 const projects = [
   {
+    slug: "jeff-next",
+    title: "Jeff Next / Tempo",
+    tier: 1,
+    summary:
+      "Next.js platform prototype for therapy operations, with marketing pages, role-based app routes, auth, billing, agenda, and local service adapters.",
+    stack: ["Next.js 16", "React 19", "Drizzle", "Playwright"],
+    repos: ["jeff-next"],
+    links: [{ label: "GitHub", url: "https://github.com/osmarpetry/jeff-next" }],
+  },
+  {
+    slug: "responsive-typing-trainer-app",
+    title: "Responsive Typing Trainer App",
+    tier: 1,
+    summary:
+      "Responsive typing practice app with live accuracy, speed feedback, session controls, and a polished Vite/React interface.",
+    stack: ["React", "Vite", "Material UI", "Tailwind CSS"],
+    repos: ["Responsive-Typing-Trainer-App"],
+    links: [
+      { label: "Live", url: "https://charming-twilight-c65b0b.netlify.app/" },
+      {
+        label: "GitHub",
+        url: "https://github.com/osmarpetry/Responsive-Typing-Trainer-App",
+      },
+    ],
+  },
+  {
+    slug: "osmarpetry-me",
+    title: "osmarpetry.me",
+    tier: 1,
+    summary:
+      "Gatsby personal blog and portfolio archive with Markdown content, Decap CMS, styled-components, and Netlify deployment.",
+    stack: ["Gatsby", "React", "Styled Components", "Decap CMS"],
+    repos: ["osmarpetry.me"],
+    links: [
+      { label: "Live", url: "https://osmarpetryme.netlify.app/" },
+      { label: "GitHub", url: "https://github.com/osmarpetry/osmarpetry.me" },
+    ],
+  },
+  {
+    slug: "portifolio-eleventry",
+    title: "Portifolio Eleventy",
+    tier: 1,
+    summary:
+      "Static-first portfolio build using Eleventy, Markdown-oriented content, syntax highlighting, and a small deployment surface.",
+    stack: ["Eleventy", "Markdown", "Shiki", "CSS"],
+    repos: ["portifolio-eleventry"],
+    links: [
+      { label: "Live", url: "https://portifolio-eleventry.netlify.app/" },
+      {
+        label: "GitHub",
+        url: "https://github.com/osmarpetry/portifolio-eleventry",
+      },
+    ],
+  },
+  {
+    slug: "roast-my-lading-slc-next",
+    title: "Roast My Landing SLC Next",
+    tier: 1,
+    summary:
+      "Single-page landing-page audit app that runs Lighthouse, stores scan artifacts, streams AI roast feedback, and exposes provider status.",
+    stack: ["Next.js 16", "Lighthouse", "OpenAI", "Postgres"],
+    repos: ["roast-my-lading-slc-next"],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/osmarpetry/roast-my-lading-slc-next",
+      },
+    ],
+  },
+  {
+    slug: "portifolio-notion",
+    title: "Portifolio Notion",
+    tier: 1,
+    summary:
+      "Notion-powered portfolio based on nextjs-notion-starter-kit, rendering a public Notion page through Next.js and react-notion-x.",
+    stack: ["Next.js", "Notion", "react-notion-x", "TypeScript"],
+    repos: ["portifolio-notion"],
+    links: [
+      {
+        label: "Notion Page",
+        url: "https://osmarpetry.notion.site/Osmar-Petry-8f6838e556644537b51e658d1645d917?pvs=74",
+      },
+      { label: "GitHub", url: "https://github.com/osmarpetry/portifolio-notion" },
+    ],
+  },
+  {
     slug: "chargebee-brevo-demo",
     title: "ChargeBee + Brevo Demo",
     tier: 1,
@@ -282,15 +368,6 @@ const projects = [
     stack: ["Vimscript", "Neovim", "vim-plug"],
     repos: ["nvim-configuration"],
     links: [{ label: "GitHub", url: "https://github.com/osmarpetry/nvim-configuration" }],
-  },
-  {
-    slug: "osmarpetry-me",
-    title: "osmarpetry.me",
-    tier: 3,
-    summary: "Older Gatsby personal site preserved as an archive of earlier frontend structure and content organization.",
-    stack: ["Gatsby", "React", "GraphQL"],
-    repos: ["osmarpetry.me"],
-    links: [{ label: "GitHub", url: "https://github.com/osmarpetry/osmarpetry.me" }],
   },
   {
     slug: "personal-blog-gatsby-trash",

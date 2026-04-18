@@ -1,6 +1,12 @@
 import projects from "./projects";
 
 const PROJECT_SLUGS_WITH_IMAGES = new Set([
+  "jeff-next",
+  "responsive-typing-trainer-app",
+  "osmarpetry-me",
+  "portifolio-eleventry",
+  "roast-my-lading-slc-next",
+  "portifolio-notion",
   "chargebee-brevo-demo",
   "rick-et-morty",
   "flowers-city",
@@ -44,6 +50,12 @@ function deriveProject(project) {
 }
 
 const derivedProjects = projects.map(deriveProject);
+const homePreviewProjectSlugs = [
+  "responsive-typing-trainer-app",
+  "roast-my-lading-slc-next",
+  "chargebee-brevo-demo",
+  "rick-et-morty",
+];
 
 const projectsByTier = { 1: [], 2: [], 3: [] };
 const projectByRepoSlug = {};
@@ -55,7 +67,9 @@ for (const project of derivedProjects) {
   }
 }
 
-const homeTier1PreviewProjects = projectsByTier[1].slice(0, 4);
+const homeTier1PreviewProjects = homePreviewProjectSlugs
+  .map((slug) => derivedProjects.find((project) => project.slug === slug))
+  .filter(Boolean);
 
 const allProjectsWithImages = derivedProjects.filter((p) => p.hasImage);
 const allProjectsWithoutImages = derivedProjects.filter((p) => !p.hasImage);

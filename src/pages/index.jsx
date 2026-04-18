@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import HeroSection from "../components/HeroSection";
 import HomeCompanies from "../components/HomeCompanies";
-import HomeMentorship from "../components/HomeMentorship";
 import FeaturedWork from "../components/FeaturedWork";
 import FeaturedSlides from "../components/FeaturedSlides";
 import LatestPosts from "../components/LatestPosts";
@@ -23,9 +22,6 @@ const IndexPage = () => (
     <FeaturedWork />
     <FeaturedSlides />
     <LatestPosts />
-    {
-      //<HomeMentorship />
-    }
   </Layout>
 );
 

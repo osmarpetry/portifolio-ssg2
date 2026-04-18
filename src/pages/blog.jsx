@@ -139,7 +139,7 @@ const PostsPage = ({ data }) => {
             </details>
           </div>
 
-          <ul className="posts-index-list" role="list">
+          <ul className="posts-index-list">
             {filteredPosts.map((post) => (
               <li key={post.id} className="posts-index-item">
                 <Link
