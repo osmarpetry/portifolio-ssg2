@@ -591,7 +591,13 @@ li {
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+}
+
+.project-body {
+    flex: 1 1 auto;
 }
 
 .project-media {
@@ -666,6 +672,14 @@ li {
     display: flex;
     flex-wrap: wrap;
     gap: 0.7rem 1rem;
+}
+
+.stack-line {
+    margin-top: auto;
+}
+
+.stack-line + .project-links {
+    margin-top: 0;
 }
 
 .project-links {
