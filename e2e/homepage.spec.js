@@ -21,12 +21,12 @@ test.describe("Homepage", () => {
     await expect(page.locator(".companies-grid .company-item").first()).toBeVisible();
   });
 
-  test("should display mentorship section", async ({ page }) => {
-    await expect(page.locator("#mentorship")).toBeVisible();
-    await expect(page.locator(".mentorship-info__title")).toContainText(
-      "Helping engineers grow"
-    );
-    await expect(page.locator(".mentee-list .mentee-item")).toHaveCount(6);
+  test("should display featured slides section", async ({ page }) => {
+    await expect(page.locator("#featured-slides")).toBeVisible();
+    await expect(page.locator(".home-slide-item").first()).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "See all presentations" })
+    ).toBeVisible();
   });
 
   test("should display featured work section", async ({ page }) => {
@@ -40,7 +40,10 @@ test.describe("Homepage", () => {
 
   test("should display footer", async ({ page }) => {
     await expect(page.locator(".site-footer")).toBeVisible();
-    await expect(page.locator(".footer-inner")).toContainText("Osmar Petry");
+    await expect(page.locator(".footer-inner")).toContainText("Back to top");
+    await expect(page.locator('.footer-inner a[href="#top"]')).toBeVisible();
+  });
+
   test("should have skip link", async ({ page }) => {
     const skipLink = page.locator(".skip-link");
     await expect(skipLink).toHaveAttribute("href", "#main");

@@ -25,6 +25,7 @@ const Seo = ({
           defaultSocialImagePath
           socialImageWidth
           socialImageHeight
+          deployCommit
         }
       }
     }
@@ -46,6 +47,7 @@ const Seo = ({
     <>
       <title>{resolvedTitle}</title>
       <meta name="description" content={resolvedDescription} />
+      <meta name="site-build-commit" content={meta.deployCommit} />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-title" content={meta.title} />
       {noindex && <meta name="robots" content="noindex, nofollow" />}

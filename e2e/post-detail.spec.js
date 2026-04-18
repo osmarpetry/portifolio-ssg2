@@ -17,7 +17,9 @@ test.describe("Post detail page", () => {
 
     await expect(page.locator(".markdown-page__title")).toContainText(postTitle.trim());
     await expect(page.locator(".markdown-prose")).toBeVisible();
-    await expect(page.locator(".breadcrumb__link").first()).toContainText("Blog");
+    await expect(
+      page.getByLabel("Breadcrumb").getByRole("link", { name: "Blog" })
+    ).toBeVisible();
 
     const currentCrumb = page.locator(".breadcrumb__current--truncate");
     const currentCrumbText = page.locator(".breadcrumb__current-text");

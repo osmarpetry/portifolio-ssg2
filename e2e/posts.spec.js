@@ -25,7 +25,7 @@ test.describe("Posts page", () => {
 
     await expect(secondChip).toHaveClass(/is-active/);
     await expect(page).toHaveURL(/\/blog\/#tag=/);
-    await expect(page.locator(".breadcrumb__link")).toContainText("Blog");
+    await expect(page.getByRole("button", { name: "Blog" })).toBeVisible();
     await expect(page.locator(".breadcrumb__current")).toContainText(tagLabel);
   });
 
@@ -34,7 +34,7 @@ test.describe("Posts page", () => {
 
     await expect(allPostsChip).toHaveClass(/is-active/);
     await expect(allPostsChip).toContainText("All posts");
-    await expect(page.locator(".breadcrumb__link")).toContainText("Blog");
+    await expect(page.getByRole("button", { name: "Blog" })).toBeVisible();
     await expect(page.locator(".breadcrumb__current")).toContainText("All Posts");
     await expect(page).toHaveURL(/\/blog\/$/);
   });
@@ -52,7 +52,7 @@ test.describe("Posts page", () => {
     await allPostsChip.click();
 
     await expect(allPostsChip).toHaveClass(/is-active/);
-    await expect(page.locator(".breadcrumb__link")).toContainText("Blog");
+    await expect(page.getByRole("button", { name: "Blog" })).toBeVisible();
     await expect(page.locator(".breadcrumb__current")).toContainText("All Posts");
     await expect(page).toHaveURL(/\/blog\/$/);
   });

@@ -1,5 +1,7 @@
 const { defineConfig, devices } = require("@playwright/test");
 
+const liveBaseURL = process.env.LIVE_BASE_URL;
+
 module.exports = defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
@@ -8,7 +10,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: "html",
   use: {
-    baseURL: "http://localhost:9000",
+    baseURL: liveBaseURL || "http://localhost:9000",
     trace: "on-first-retry",
   },
   projects: [
@@ -17,10 +19,12 @@ module.exports = defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
   ],
-  webServer: {
-    command: "npm run serve",
-    url: "http://localhost:9000",
-    reuseExistingServer: !process.env.CI,
-    timeout: 120000,
-  },
+  webServer: liveBaseURL
+    ? undefined
+    : {
+        command: "npm run build && npm run serve",
+        url: "http://localhost:9000",
+        reuseExistingServer: !process.env.CI,
+        timeout: 180000,
+      },
 });

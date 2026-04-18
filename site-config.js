@@ -21,6 +21,12 @@ const siteConfig = {
   socialImageHeight: 630,
   googleAnalyticsTrackingId:
     process.env.GATSBY_GA_MEASUREMENT_ID || "G-3STVN66PY5",
+  deployCommit:
+    process.env.COMMIT_REF ||
+    process.env.HEAD ||
+    process.env.VERCEL_GIT_COMMIT_SHA ||
+    process.env.GITHUB_SHA ||
+    "local",
   currentYear: new Date().getFullYear(),
 };
 

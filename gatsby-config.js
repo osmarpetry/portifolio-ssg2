@@ -23,8 +23,10 @@ module.exports = {
     defaultSocialImagePath: siteConfig.defaultSocialImagePath,
     socialImageWidth: siteConfig.socialImageWidth,
     socialImageHeight: siteConfig.socialImageHeight,
+    deployCommit: siteConfig.deployCommit,
   },
   plugins: [
+    // GA4 web stream: Osmar Petry Vercel, https://osmarpetry.dev
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
