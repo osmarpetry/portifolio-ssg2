@@ -2,7 +2,7 @@
   "name": "portifolio-ssg2",
   "version": "1.0.0",
   "private": true,
-  "description": "Osmar Petry portfolio — Gatsby SSG",
+  "description": "Osmar Petry portfolio \u2014 Gatsby SSG",
   "engines": {
     "node": "24.x"
   },
@@ -14,7 +14,8 @@
     "clean": "gatsby clean",
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:resume-pdf": "node scripts/build-resume-pdf.mjs"
   },
   "dependencies": {
     "gatsby": "5.16.1",
