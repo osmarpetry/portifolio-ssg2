@@ -13,7 +13,7 @@
 
 ## Summary
 
-Luxembourgish Senior Software Engineer with 10+ years building and scaling web and mobile products across EU and US distributed teams. Full-stack delivery across TypeScript and Python: product interfaces in React, Vue and Next.js, backend services with Node.js, FastAPI and Temporal, and the testing, CI/CD and observability practices that keep them reliable in production.
+Luxembourgish-Brazilian Senior Software Engineer with 10+ years building and scaling web and mobile products across EU and US distributed teams. Full-stack delivery across TypeScript and Python: product interfaces in React, Vue and Next.js, backend services with Node.js, FastAPI and Temporal, and the testing, CI/CD and observability practices that keep them reliable in production.
 
 ## Core Skills
 

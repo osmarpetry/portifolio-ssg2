@@ -3,7 +3,7 @@ const pageMetadata = {
     pathname: "/",
     title: "Osmar Petry",
     description:
-      "Luxembourgish Senior Software Engineer with 10+ years building and scaling web and mobile products across EU and US distributed teams. Full-stack delivery across TypeScript and Python: product interfaces in React, Vue and Next.js, backend services with Node.js, FastAPI and Temporal, and the testing, CI/CD and observability practices that keep them reliable in production.",
+      "Luxembourgish-Brazilian Senior Software Engineer with 10+ years building and scaling web and mobile products across EU and US distributed teams. Full-stack delivery across TypeScript and Python: product interfaces in React, Vue and Next.js, backend services with Node.js, FastAPI and Temporal, and the testing, CI/CD and observability practices that keep them reliable in production.",
     ogImagePath: "/assets/images/og/home.jpg",
   },
   projects: {
@@ -24,7 +24,7 @@ const pageMetadata = {
     pathname: "/resume/",
     title: "Resume — Osmar Petry",
     description:
-      "Resume and experience summary for Osmar Petry, a Luxembourgish Senior Software Engineer with 10+ years of full-stack delivery across TypeScript and Python, building and scaling web and mobile products across EU and US distributed teams.",
+      "Resume and experience summary for Osmar Petry, a Luxembourgish-Brazilian Senior Software Engineer with 10+ years of full-stack delivery across TypeScript and Python, building and scaling web and mobile products across EU and US distributed teams.",
     ogImagePath: "/assets/images/og/resume.jpg",
   },
   slides: {
