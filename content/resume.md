@@ -13,17 +13,32 @@
 
 ## Summary
 
-Luxembourgish Senior Software Engineer with 9+ years of experience building and scaling web and mobile products across EU and US distributed teams. Strong background in frontend engineering with JavaScript, TypeScript, HTML, CSS, React, unit testing, development and build tools, and CI/CD, plus practical full-stack experience with Node.js and Java-based systems.
+Luxembourgish Senior Software Engineer with 10+ years building and scaling web and mobile products across EU and US distributed teams. Full-stack delivery across TypeScript and Python: product interfaces in React, Vue and Next.js, backend services with Node.js, FastAPI and Temporal, and the testing, CI/CD and observability practices that keep them reliable in production.
 
 ## Core Skills
 
-JavaScript, TypeScript, HTML, CSS, React, Node.js, Next.js, Unit Testing, Jest, Testing Library, Cypress, Playwright, CI/CD, Development and Build Tools, GraphQL, Redux, Storybook, React Native, AWS, GCP, Firebase, Drizzle ORM, Micro Frontends, Java
+TypeScript, JavaScript, Python, React, Next.js, Vue, Nuxt, Node.js, FastAPI, Pydantic, Temporal, REST APIs, PostgreSQL, Supabase, GraphQL, RAG, Pinecone, Observability, Distributed Tracing, Unit Testing, Jest, Testing Library, Cypress, Playwright, CI/CD, Development and Build Tools, Redux, Storybook, React Native, AWS, GCP, Firebase, Drizzle ORM, Micro Frontends, HTML, CSS, Java
 
 ## Experience
 
+### Deelan
+#### Senior Software Engineer
+Luxembourg · Jun 2026 - Present
+
+<!-- dns: Coaching session intelligence end to end: RAG on Pinecone,
+durable workflows on Temporal, observability across the pipeline.
+Python, FastAPI, TypeScript, Vue, Nuxt, Supabase, Playwright. -->
+
+- Built the session intelligence pipeline end to end for a coaching platform, from ingestion through AI-assisted diagnosis to generated roleplay grounded in a Pinecone knowledge base.
+- Implemented RAG workflows over a Pinecone vector store with Python and FastAPI services, using Pydantic models to validate what crosses the API boundary.
+- Orchestrated long-running session processing with Temporal, so multi-step jobs stay durable and consistent across retries and partial failures.
+- Instrumented the pipeline for observability with structured logging, tracing and metrics, so a failed session is diagnosed from evidence rather than guessed at.
+- Delivered the product surfaces in Vue, Nuxt and TypeScript, including virtualized tables that keep large result sets responsive, and the shared design system.
+- Shipped behind feature flags with Playwright end-to-end coverage, on Supabase and PostgreSQL.
+
 ### Cyberr®
 #### Senior Software Engineer
-Luxembourg · Oct 2025 - Present
+Luxembourg · Oct 2025 - Jun 2026
 
 <!-- dns: Scheduling and meeting flows for a cybersecurity hiring platform.
 Daily.co, Microsoft Graph and Veriff integrations, Storybook.
