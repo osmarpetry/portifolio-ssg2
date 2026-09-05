@@ -172,7 +172,24 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
+/**
+ * Publishes the CV markdown as-is at /resume.md.
+ *
+ * It is the single source the site page, the PDF and the DNS CV
+ * (github.com/osmarpetry/dns-cv) are all built from, so it has to be readable
+ * from outside this repo.
+ */
+const publishResumeMarkdown = async (reporter) => {
+  const source = path.join(__dirname, "content", "resume.md");
+  const destination = path.join(__dirname, "public", "resume.md");
+
+  await fs.copyFile(source, destination);
+  reporter.info(`Published ${path.relative(__dirname, destination)}`);
+};
+
 exports.onPostBuild = async ({ graphql, reporter }) => {
+  await publishResumeMarkdown(reporter);
+
   const result = await graphql(`
     {
       allMarkdownRemark(filter: { fields: { slug: { ne: "resume" } } }) {
