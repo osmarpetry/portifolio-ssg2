@@ -4,7 +4,7 @@ const siteConfig = {
   alternateName: ["Osmar Petry Portfolio", "osmarpetry.dev"],
   url: "https://osmarpetry.dev",
   description:
-    "Luxembourgish Senior Software Engineer with 9+ years of experience building and scaling web and mobile products across EU and US distributed teams. Strong background in frontend engineering with JavaScript, TypeScript, HTML, CSS, React, unit testing, development and build tools, and CI/CD, plus practical full-stack experience with Node.js and Java-based systems.",
+    "Luxembourgish Senior Software Engineer with 10+ years building and scaling web and mobile products across EU and US distributed teams. Full-stack delivery across TypeScript and Python: product interfaces in React, Vue and Next.js, backend services with Node.js, FastAPI and Temporal, and the testing, CI/CD and observability practices that keep them reliable in production.",
   themeColor: "#6c5a9a",
   backgroundColor: "#f7f3ed",
   language: "en-US",

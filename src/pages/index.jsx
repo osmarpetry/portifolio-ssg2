@@ -16,7 +16,7 @@ const IndexPage = () => (
       backgroundColor="#203629"
       position="left"
       title="Osmar Petry"
-      descriptionHtml="<p><strong>Luxembourgish Senior Software Engineer</strong> with <strong>9+ years</strong> of experience building and scaling web and mobile products across EU and US distributed teams. Strong background in frontend engineering with JavaScript, TypeScript, HTML, CSS, React, unit testing, development and build tools, and CI/CD, plus practical full-stack experience with Node.js and Java-based systems.</p>"
+      descriptionHtml="<p><strong>Luxembourgish Senior Software Engineer</strong> with <strong>10+ years</strong> building and scaling web and mobile products across EU and US distributed teams. Full-stack delivery across TypeScript and Python: product interfaces in React, Vue and Next.js, backend services with Node.js, FastAPI and Temporal, and the testing, CI/CD and observability practices that keep them reliable in production.</p>"
     />
     <HomeCompanies />
     <FeaturedWork />
