@@ -25,6 +25,10 @@ JavaScript, TypeScript, HTML, CSS, React, Node.js, Next.js, Unit Testing, Jest, 
 #### Senior Software Engineer
 Luxembourg · Oct 2025 - Present
 
+<!-- dns: Scheduling and meeting flows for a cybersecurity hiring platform.
+Daily.co, Microsoft Graph and Veriff integrations, Storybook.
+TypeScript, React, Next.js, Node.js, Drizzle, Zod, CI/CD. -->
+
 - Building product features for a cybersecurity recruitment platform and upcoming social network, contributing across frontend engineering and practical full-stack delivery.
 - Delivered an end-to-end calendar and meeting scheduling flow, including calendar views, request, accept, propose, and decline flows, plus supporting dashboard widgets.
 - Built production features with Next.js, React, TypeScript, HTML/CSS, HeroUI, React Hook Form, and Zod, while keeping the implementation maintainable and testable.
@@ -38,6 +42,10 @@ Luxembourg · Oct 2025 - Present
 #### Senior Software Engineer
 Los Angeles, CA, USA (remote) · May 2023 - Oct 2025
 
+<!-- dns: Admin dashboard for inventory and assignment management, plus
+payment and gift card flows across the Pass, Flow and Flex products.
+TypeScript, React, Next.js, Node.js, Redux, AWS. -->
+
 - Built and scaled product features across Attend's platform, contributing across frontend engineering and practical full-stack delivery.
 - Spearheaded the development of an administration dashboard for inventory and assignment management, reducing operational workload and support ticket response time while removing the need for additional staff monitoring.
 - Contributed to payment workflows and gift card integrations for Flex, supporting business-critical product flows.
@@ -49,6 +57,9 @@ Los Angeles, CA, USA (remote) · May 2023 - Oct 2025
 #### Senior Software Engineer
 Remote · Feb 2023 - Aug 2023
 
+<!-- dns: React Native health app centralizing patient data and lab
+integrations; modular architecture for event and city apps. -->
+
 - Designed and implemented a React Native health application that centralized patient health data, integrated third-party labs, and enabled patient-doctor communication.
 - Built city-specific and event-specific mobile applications with a modular architecture that improved branding flexibility and user engagement.
 - Delivered a scalable structure that junior developers could maintain cost-effectively with occasional consulting support.
@@ -59,6 +70,10 @@ Remote · Feb 2023 - Aug 2023
 ### X-Team
 #### Senior Software Engineer
 Remote · Mar 2021 - Feb 2023
+
+<!-- dns: Frontend and full-stack delivery for media, fitness and creator
+clients: invoicing back office, workflow automation, GraphQL filters,
+browser game features and CLI tooling. -->
 
 - Worked across multiple client projects as a Senior Software Engineer, delivering frontend and full-stack solutions with JavaScript, TypeScript, React, testing, and build tooling across different business domains.
 - For KMF / XHQ, improved back-office invoicing systems and internal portals, while introducing backend improvements with Firebase and Node.js to streamline operations and improve performance.
@@ -72,6 +87,9 @@ Remote · Mar 2021 - Feb 2023
 #### Frontend Software Engineer
 Brazil · Dec 2020 - Mar 2021
 
+<!-- dns: Micro-frontends with Webpack Module Federation and a shared
+component library for a large marketplace. -->
+
 - Helped develop a digital marketplace product in a cross-functional environment with strong focus on frontend engineering using JavaScript, TypeScript, React, HTML, and CSS.
 - Implemented a Micro Front-End architecture using Webpack Module Federation.
 - Built and maintained a scalable component library to improve UI consistency and reuse.
@@ -82,6 +100,8 @@ Brazil · Dec 2020 - Mar 2021
 ### Zup Innovation
 #### Frontend Software Engineer
 Joinville Area, Brazil · Aug 2019 - Dec 2020
+
+<!-- dns: Fleet telemetry apps with real-time D3.js visualizations. -->
 
 - Designed and implemented telemetry applications for fleet logistics with real-time visualizations using D3.js.
 - Built frontend experiences that improved operational decision-making through clearer access to live data.
@@ -144,6 +164,10 @@ Jaraguá do Sul Area, Brazil · Aug 2015 - Aug 2017
 - Delivered presentations on Git, Arduino, and LaTeX to support team learning and execution.
 - Built early experience with Java-based systems, process modeling, and technical communication.
 - Applied Java, Javascript, HTML, CSS, React, unit testing, development and build tools, and CI/CD practices across software-oriented research, process modeling, and technical delivery.
+
+<!-- dns-earlier: NG Informatica/TOTVS, CoBlue OKR, Envolve Labs, TOTVS
+(PO UI component library) and research work on BPMN with Camunda,
+2015 to 2019. -->
 
 ## Education
 
