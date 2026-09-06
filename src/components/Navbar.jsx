@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "gatsby";
+import siteData from "../data/site";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,6 +72,15 @@ const Navbar = () => {
           <Link className="nav-link" to="/slides/" onClick={close}>
             Slides
           </Link>
+          <a
+            className="nav-link"
+            href={siteData.linktree}
+            target="_blank"
+            rel="noreferrer"
+            onClick={close}
+          >
+            Linktree
+          </a>
         </div>
       </div>
     </nav>

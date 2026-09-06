@@ -12,6 +12,7 @@ const siteConfig = {
   email: "osmarpetry@gmail.com",
   linkedin: "https://www.linkedin.com/in/osmarpetry",
   github: "https://github.com/osmarpetry",
+  linktree: "https://linktree.osmarpetry.dev",
   jobTitle: "Senior Software Engineer",
   rssPath: "/rss.xml",
   heroImagePublicPath: "/assets/images/hero/osmar-hero.jpg",
