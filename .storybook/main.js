@@ -3,7 +3,7 @@ const path = require("path");
 /** @type {import('@storybook/react-webpack5').StorybookConfig} */
 module.exports = {
   stories: ["../src/**/*.stories.@(js|jsx)"],
-  addons: ["@storybook/addon-essentials"],
+  addons: ["@storybook/addon-mcp", "@storybook/addon-docs"],
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
