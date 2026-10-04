@@ -34,16 +34,16 @@
     "highlight.js": "^11.12.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "sharp": "^0.35.4"
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.28.5",
     "@playwright/test": "^1.63.0",
-    "@storybook/react": "^10.6.0",
-    "@storybook/react-webpack5": "^10.6.0",
+    "@storybook/react": "^10.6.1",
+    "@storybook/react-webpack5": "^10.6.1",
     "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.32",
     "storybook": "^10.6.0",
-    "@storybook/addon-mcp": "^10.6.0",
-    "@storybook/addon-docs": "^10.6.0"
+    "@storybook/addon-mcp": "^10.6.1",
+    "@storybook/addon-docs": "^10.6.1"
   }
 }
