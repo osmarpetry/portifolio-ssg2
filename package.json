@@ -39,11 +39,11 @@
   "devDependencies": {
     "@babel/preset-react": "^7.28.5",
     "@playwright/test": "^1.64.1",
-    "@storybook/react": "^10.6.2",
-    "@storybook/react-webpack5": "^10.6.2",
+    "@storybook/react": "^10.6.3",
+    "@storybook/react-webpack5": "^10.6.3",
     "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.32",
     "storybook": "^10.6.0",
-    "@storybook/addon-mcp": "^10.6.2",
-    "@storybook/addon-docs": "^10.6.2"
+    "@storybook/addon-mcp": "^10.6.3",
+    "@storybook/addon-docs": "^10.6.3"
   }
 }
